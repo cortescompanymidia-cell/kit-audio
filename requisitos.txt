@@ -1,0 +1,8 @@
+sherpa-onnx>=1.12
+librosa
+numpy
+scipy
+soundfile
+pyloudnorm
+noisereduce
+pedalboard

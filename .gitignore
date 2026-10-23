@@ -1,0 +1,5 @@
+modelos/
+__pycache__/
+*_mapa/
+*_tratado.*
+*_relatorio.md

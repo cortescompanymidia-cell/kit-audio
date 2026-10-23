@@ -1,0 +1,396 @@
+<title>Manual de Showreel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: mesma "ilha de edição" do manual de vídeos curtos; aqui o gráfico mostra música (energia) + cortes, porque num showreel a trilha manda. */
+:root{
+  --bg:#F2F3F6; --surface:#FFFFFF; --ink:#16181D; --muted:#5A6070; --line:#D9DCE3;
+  --rec:#E0353B; --cue:#2A57C0; --wave:#9AA6C4; --tint:#FBE9EA; --gold:#B7791F;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111318; --surface:#1A1D24; --ink:#E8EAF0; --muted:#9AA1B2; --line:#2C303A;
+    --rec:#FF5A5F; --cue:#6E95FF; --wave:#4A5878; --tint:#2A1A1D; --gold:#E0A84A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111318; --surface:#1A1D24; --ink:#E8EAF0; --muted:#9AA1B2; --line:#2C303A;
+  --rec:#FF5A5F; --cue:#6E95FF; --wave:#4A5878; --tint:#2A1A1D; --gold:#E0A84A; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 64px}
+.wrap{max-width:980px;margin:0 auto}
+.prose{max-width:66ch;display:grid;gap:10px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.1;margin:0}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,3.6vw,2.1rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:800}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tc{font-family:var(--mono);font-variant-numeric:tabular-nums}
+section{padding-block:56px 0;display:grid;gap:22px}
+hr{border:0;border-top:1px solid var(--line);margin:56px 0 0}
+header{padding-block:48px 0;display:grid;gap:18px}
+.slate{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.slate b{color:var(--ink);font-weight:600}
+.lede{font-size:1.2rem;max-width:60ch}
+
+/* quando usar */
+.when{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.when > div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start}
+.when ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.when .yes h3{color:var(--gold)}
+.when .no h3{color:var(--muted)}
+.rulebar{border:1px solid var(--line);border-radius:10px;background:var(--tint);padding:14px 18px;font-weight:600}
+
+/* gráficos */
+.tl{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 12px;display:grid;gap:18px}
+.tl-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}
+.tl-row .lab{font-size:.9rem;line-height:1.25;min-width:0}
+.tl-row .lab small{display:block;color:var(--muted);font-family:var(--mono);font-size:.72rem}
+.tl svg{width:100%;height:70px;display:block;overflow:visible}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.82rem;color:var(--muted);padding-top:6px;border-top:1px solid var(--line)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+@media (max-width:620px){.tl-row{grid-template-columns:1fr;gap:4px}}
+
+.tablebox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:.92rem}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+
+.rules{display:grid}
+.rule{display:grid;grid-template-columns:64px 1fr;gap:18px;padding-block:26px;border-top:1px solid var(--line)}
+.rule:first-child{border-top:0}
+.rule .num{font-family:var(--mono);font-size:.8rem;color:var(--rec);padding-top:6px}
+.rule .body{display:grid;gap:10px;min-width:0}
+.rule .data{font-family:var(--mono);font-size:.82rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.rule ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+@media (max-width:560px){.rule{grid-template-columns:1fr;gap:6px}}
+
+/* estruturas */
+.arc{display:grid;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.arc .seg{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:12px 16px;border-top:1px solid var(--line);align-items:baseline}
+.arc .seg:first-child{border-top:0}
+.arc .tc{font-size:.78rem;color:var(--rec)}
+.arc p{font-size:.95rem}
+.arc .h{background:var(--tint);font-family:var(--display);font-weight:800;padding:12px 16px}
+
+/* transcrições */
+.tr{display:grid;gap:18px}
+.trbox{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.trbox h3{padding:14px 16px;border-bottom:1px solid var(--line)}
+.trline{display:grid;grid-template-columns:90px 1fr 1fr;gap:14px;padding:10px 16px;border-top:1px solid var(--line);font-size:.95rem}
+.trline:first-of-type{border-top:0}
+.trline .tc{font-size:.78rem;color:var(--muted);padding-top:3px}
+.trline .en{color:var(--muted);font-style:italic}
+.trline .vis{grid-column:2 / 4;font-size:.85rem;color:var(--cue)}
+@media (max-width:640px){.trline{grid-template-columns:1fr}.trline .vis{grid-column:auto}}
+
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.ref{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.ref .tag{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.ref ul{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.95rem}
+.ref .steal{border-top:1px dashed var(--line);padding-top:10px;font-size:.93rem}
+.ref .steal b{color:var(--rec)}
+
+.check{display:grid;gap:8px;list-style:none;padding:0;margin:0}
+.check li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+.check li::before{content:"";width:16px;height:16px;border:2px solid var(--ink);border-radius:4px;margin-top:5px}
+.note{font-size:.92rem;color:var(--muted);border-left:3px solid var(--line);padding-left:14px}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.cmp div{background:var(--surface);padding:16px;display:grid;gap:6px}
+.cmp .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Manual de edição · capítulo especial</p>
+  <h1>Showreel: a edição de gala</h1>
+  <p class="lede">Um showreel é o vídeo que mostra do que você é capaz. Ele segue regras diferentes dos vídeos do dia a dia: a música manda, cada segundo é um destaque e o objetivo é impressionar, não explicar. Este capítulo foi escrito a partir da análise de 3 showreels, incluindo transcrição da narração, ritmo da música e cortes.</p>
+  <div class="slate">
+    <span>SHOWREELS <b>3</b></span>
+    <span>DURAÇÃO <b class="tc">30 a 51 s</b></span>
+    <span>FORMATO <b>16:9 e 2,39:1</b></span>
+    <span>VOLUME <b class="tc">−14 a −15 LUFS</b></span>
+  </div>
+</header>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">00 · Antes de tudo</p>
+    <h2>Quando usar e quando não usar</h2>
+  </div>
+  <p class="rulebar">Showreel é para momentos especiais. Se toda semana tiver um, nenhum vai ser especial.</p>
+  <div class="when">
+    <div class="yes"><h3>Use em</h3><ul>
+      <li>Lançamento do canal, da marca ou de uma nova temporada</li>
+      <li>Marco alcançado: 100 mil seguidores, 1 milhão de visualizações, aniversário do canal</li>
+      <li>Retrospectiva do ano</li>
+      <li>Portfólio para fechar com clientes ou empresas</li>
+      <li>Abertura de evento, palestra ou apresentação</li>
+      <li>Fixado no topo do perfil como "cartão de visita"</li>
+    </ul></div>
+    <div class="no"><h3>Evite em</h3><ul>
+      <li>Conteúdo do dia a dia, notícias e explicações</li>
+      <li>Vídeos em que a informação importa mais que o impacto</li>
+      <li>Mais de 2 ou 3 vezes por ano no mesmo canal</li>
+      <li>Quando não há material bom suficiente: 30 segundos excelentes valem mais que 90 medianos</li>
+    </ul></div>
+  </div>
+  <div class="cmp">
+    <div><span class="k">Vídeo do dia a dia</span><p>Objetivo: explicar. A fala manda, a imagem ilustra. Vertical 9:16. 60 a 100 s. Legenda o tempo todo.</p></div>
+    <div><span class="k">Showreel</span><p>Objetivo: impressionar. A música manda, a imagem é o conteúdo. Horizontal 16:9 ou cinema. 30 a 60 s. Texto só em palavras-chave.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">01 · Música e cortes</p>
+    <h2>A música desenha o vídeo</h2>
+    <p>A área cinza é a energia da trilha, segundo a segundo. Os traços vermelhos são os cortes. Repare que a música sobe nos primeiros segundos (abertura), mantém o nível no meio e cai no final. Os cortes se concentram onde a música está mais forte.</p>
+  </div>
+  <div class="tl" id="tl"></div>
+</section>
+
+<section>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>Showreel</th><th>Duração</th><th>Narração</th><th>Andamento</th><th>Cortes</th><th>Intervalo típico</th><th>Volume</th><th>Formato</th></tr></thead>
+      <tbody>
+        <tr><td>S1 · Motion design e 3D</td><td class="n">0:51</td><td>Nenhuma, só música</td><td class="n">96 BPM</td><td class="n">47</td><td class="n">0,7 s</td><td class="n">−14,2 LUFS</td><td>2,39:1 · 30 qps</td></tr>
+        <tr><td>S2 · Editor de vídeo</td><td class="n">0:46</td><td>Voz em off, tom de manifesto</td><td class="n">144 BPM</td><td class="n">34</td><td class="n">0,7 s</td><td class="n">−14,6 LUFS</td><td>16:9 · 24 qps</td></tr>
+        <tr><td>S3 · Editor de YouTube</td><td class="n">0:30</td><td>O próprio editor, tom de conversa</td><td class="n">108 BPM</td><td class="n">11 (+ animação contínua)</td><td class="n">1,1 s</td><td class="n">−14,6 LUFS</td><td>16:9 · 24 qps</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Ao contrário de parte dos vídeos de referência anteriores, os três showreels já saem no volume certo para as redes (cerca de −14 LUFS). S2 e S3 chegam a 0 dB de pico, no limite da distorção; deixe sempre uma margem de −1 dB.</p>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">02 · As regras</p>
+    <h2>Oito decisões de um showreel</h2>
+  </div>
+  <div class="rules">
+    <div class="rule"><div class="num">S01</div><div class="body">
+      <h3>Escolha a música antes de tudo e corte na batida</h3>
+      <p>No showreel, a música é a estrutura. No trecho de montagem de S1, há um corte a cada batida (às vezes a cada duas). No final de S2, os cortes aceleram para um a cada batida durante 4 segundos.</p>
+      <div class="data">S1, 14 s a 29 s: batida a cada 0,63 s · intervalo entre cortes 0,6 a 0,76 s (1 batida) ou 1,2 s (2 batidas) · som no instante do corte: 8 vezes mais forte que a média<br>S2, 29,5 s a 34 s: batida a cada 0,42 s · cortes a cada 0,33 a 0,46 s</div>
+      <p><b>Como fazer:</b> marque as batidas na linha do tempo antes de montar. Corte no golpe forte (bumbo, caixa, impacto). Em trechos mais calmos, use 2 ou 4 batidas por plano.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">S02</div><div class="body">
+      <h3>Abertura que cresce, como uma cortina subindo</h3>
+      <p>Os três começam com uma introdução de 3 a 7 segundos antes de mostrar trabalho. A música entra baixa e sobe até o primeiro impacto, que coincide com a revelação do nome ou do logo.</p>
+      <ul>
+        <li><b>S1:</b> uma lista de habilidades rola como um menu e para em "Motion Design"; depois, cartela "Motion Design Showreel 2025" em fundo claro; depois, logo com efeito de falha digital e separação de cores. Energia da música: de −31 para −12 dB em 7 segundos. Primeiro impacto forte em 5,7 s, junto com o logo.</li>
+        <li><b>S2:</b> abre com a pergunta "Você procura um editor…?", com setas apontando para alguém de costas diante de telas.</li>
+        <li><b>S3:</b> o nome brilhando, com aberração cromática, e um voo por dentro de linhas do tempo de edição em 3D.</li>
+      </ul>
+    </div></div>
+
+    <div class="rule"><div class="num">S03</div><div class="body">
+      <h3>Mostre, não diga: cada palavra vira uma demonstração</h3>
+      <p>Em S2, toda palavra da narração é provada na tela no mesmo instante. Quando ele diz "estabilização", aparece uma tomada estabilizada com a palavra escrita numa placa da cena. Quando diz "saber desacelerar", entra uma câmera lenta e a música abaixa. Veja a transcrição completa na seção 04.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">S04</div><div class="body">
+      <h3>Texto só em palavras-chave, e o texto também é imagem</h3>
+      <p>Não há legenda corrida. Aparecem palavras soltas, grandes, que fazem parte do design: "SPEED", "PRECISION", "POSSIBILITIES" em S2, números de visualizações em S3.</p>
+      <ul>
+        <li>Palavra que troca de fonte e de peso a cada batida (preenchida, só contorno, condensada).</li>
+        <li>Texto como máscara: a palavra se abre e revela o vídeo por dentro.</li>
+        <li>Texto que "mora" na cena: escrito numa placa da estrada ou atrás de uma pessoa.</li>
+      </ul>
+    </div></div>
+
+    <div class="rule"><div class="num">S05</div><div class="body">
+      <h3>Variedade de técnicas, uma por trecho</h3>
+      <p>O showreel é um cardápio. Cada trecho mostra uma habilidade diferente, sem repetir o truque.</p>
+      <ul>
+        <li><b>Tela dividida</b> com duas cenas que conversam entre si (S1, em vários produtos).</li>
+        <li><b>Repetição em grade</b> (efeito caleidoscópio) que se estilhaça em pedaços para virar a próxima cena (S2).</li>
+        <li><b>Transformação de estilo:</b> uma filmagem real vira desenho animado no meio do plano (S2, ciclista).</li>
+        <li><b>Negativo</b> e troca brusca de cor para marcar "o mais importante" (S2).</li>
+        <li><b>Rampa de velocidade</b> e câmera lenta.</li>
+        <li><b>Voo 3D</b> por dentro do próprio material de trabalho (S3).</li>
+      </ul>
+    </div></div>
+
+    <div class="rule"><div class="num">S06</div><div class="body">
+      <h3>Prova social e credibilidade</h3>
+      <p>Os showreels mostram quem confia no trabalho e quais resultados ele gerou.</p>
+      <ul>
+        <li><b>S1:</b> logos dos clientes aparecem ao fim de cada trabalho (uma agência digital, uma empresa, uma estação de esqui).</li>
+        <li><b>S3:</b> números subindo um atrás do outro ("989k", "1M", "1.4M", "1.5M", até "10M+ views generated") e ícones dos programas com os anos de experiência.</li>
+      </ul>
+    </div></div>
+
+    <div class="rule"><div class="num">S07</div><div class="body">
+      <h3>Um respiro antes do final</h3>
+      <p>Depois de muita intensidade, todos dão uma pausa para o final ter peso. Em S2, a música cai duas vezes (−27 dB em 34 s e −30 dB em 38 s) justamente na frase "saber quando desacelerar e quando deixar o momento falar por si". Em S3, o respiro é uma piada: o editor se perde na fala e diz "ah, tanto faz", e a música baixa.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">S08</div><div class="body">
+      <h3>Encerramento: nome e endereço, nada mais</h3>
+      <p>Os três terminam com uma cartela limpa: nome, site e no máximo duas redes. S1 mantém a cartela por 4 segundos no mesmo fundo claro da abertura, fechando o vídeo como um livro. S2 termina mostrando os bastidores, com a tela do programa de edição, provando que o trabalho é dele.</p>
+    </div></div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">03 · Estruturas</p>
+    <h2>Três formas de montar</h2>
+  </div>
+  <div class="arc">
+    <div class="h">Só música (S1): o portfólio fala sozinho</div>
+    <div class="seg"><span class="tc">0–3 s</span><p>Introdução: menu de habilidades, música baixa crescendo.</p></div>
+    <div class="seg"><span class="tc">3–7 s</span><p>Cartela com título e ano. Logo revelado no primeiro impacto.</p></div>
+    <div class="seg"><span class="tc">7–32 s</span><p>Montagem principal: um trabalho por batida, os melhores primeiro.</p></div>
+    <div class="seg"><span class="tc">32–46 s</span><p>Trabalhos para clientes, cada um terminando no logo do cliente.</p></div>
+    <div class="seg"><span class="tc">46–51 s</span><p>Cartela final com nome e site, música sumindo.</p></div>
+  </div>
+  <div class="arc">
+    <div class="h">Narração de manifesto (S2): cada frase é uma promessa provada</div>
+    <div class="seg"><span class="tc">0–8 s</span><p>Pergunta ao cliente: "Você procura…?"</p></div>
+    <div class="seg"><span class="tc">8–20 s</span><p>Promessas em sequência, cada uma com sua imagem.</p></div>
+    <div class="seg"><span class="tc">20–30 s</span><p>Lista de técnicas, cada uma demonstrada.</p></div>
+    <div class="seg"><span class="tc">30–40 s</span><p>Virada: "o mais importante…", câmera lenta, música abaixa.</p></div>
+    <div class="seg"><span class="tc">40–46 s</span><p>Frase de efeito final e bastidores.</p></div>
+  </div>
+  <div class="arc">
+    <div class="h">Conversa com o editor (S3): personalidade e números</div>
+    <div class="seg"><span class="tc">0–8 s</span><p>Problema e promessa: "Editar é complicado. Mas estou aqui para salvar seu dia."</p></div>
+    <div class="seg"><span class="tc">8–15 s</span><p>Resultados: números de visualizações em sequência.</p></div>
+    <div class="seg"><span class="tc">15–25 s</span><p>Ferramentas e habilidades, com ícones e exemplos.</p></div>
+    <div class="seg"><span class="tc">25–30 s</span><p>Piada que humaniza e cartela com site.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">04 · Transcrições</p>
+    <h2>O que é dito e o que aparece</h2>
+    <p>S1 não tem fala, só música instrumental animada. As narrações de S2 e S3 estão em inglês; ao lado vai a tradução, e abaixo de cada trecho, em azul, o que aparece na tela naquele momento.</p>
+  </div>
+  <div class="tr">
+    <div class="trbox"><h3>S2 · Editor de vídeo (voz em off)</h3>
+      <div class="trline"><span class="tc">0–8 s</span><span>Você procura um editor de vídeo que leve seu projeto da ideia ao quadro final, transformando material bruto numa história clara?</span><span class="en">Are you looking for a video editor who can take your project from idea to final frame, turning raw footage into a clear story?</span><span class="vis">Palavras "Are YOU looking for" em volta de alguém diante das telas · lâmpada → linha pontilhada → notebook · "clear story" em letras recortadas de revista</span></div>
+      <div class="trline"><span class="tc">8–12 s</span><span>Mantendo o ritmo. Nenhum momento chato. Nenhum segundo desperdiçado.</span><span class="en">Keeping the rhythm. No boring moments. No wasted seconds.</span><span class="vis">Mosaico de vídeos de clientes → estrada infinita de clipes no espaço com o título por cima</span></div>
+      <div class="trline"><span class="tc">12–20 s</span><span>Uso inteligente de IA, não para substituir a criatividade, mas para aumentar velocidade, precisão e possibilidades.</span><span class="en">Smart use of AI, not to replace creativity, but to enhance speed, precision and possibilities.</span><span class="vis">Cachorro de óculos (imagem de IA) → repetido em grade → estilhaça → "SPEED", "PRECISION", "POSSIBILITIES" trocando de fonte</span></div>
+      <div class="trline"><span class="tc">20–24 s</span><span>Transições suaves, correção de cor limpa.</span><span class="en">Seamless transitions, clean color grading.</span><span class="vis">A palavra abre e revela uma paisagem aérea · transição rápida com chicote de câmera</span></div>
+      <div class="trline"><span class="tc">24–30 s</span><span>Estabilização, animações gráficas que servem à história, sem distrair dela.</span><span class="en">Stabilization, motion graphics that serve the story, not distract from it.</span><span class="vis">Ciclista na estrada com a placa "STABILIZATION" · roda em chamas · filmagem vira desenho animado</span></div>
+      <div class="trline"><span class="tc">30–40 s</span><span>E, o mais importante, saber quando desacelerar e quando deixar o momento falar por si.</span><span class="en">And most importantly, knowing when to slow down and when to let the moment speak for itself.</span><span class="vis">"MOST IMPORTANTLY" em negativo · drift de carros visto de drone · pessoa voando · pássaro em câmera lenta, música abaixa</span></div>
+      <div class="trline"><span class="tc">40–46 s</span><span>Porque edição não é só efeito. É sentir o vídeo até o último quadro.</span><span class="en">Because editing isn't just about effects, it's about feeling the video till the very last frame.</span><span class="vis">"BECAUSE" · "ISN'T JUST ABOUT EFFECTS" em tipografia vertical · dança na rua → revela a tela do programa de edição</span></div>
+    </div>
+    <div class="trbox"><h3>S3 · Editor de YouTube (o próprio editor fala)</h3>
+      <div class="trline"><span class="tc">0–8 s</span><span>Editar é complicado. Mas estou aqui para salvar seu dia.</span><span class="en">Editing is complicated. But I'm here to save your day.</span><span class="vis">Nome brilhando com aberração cromática · voo 3D por dentro de linhas do tempo de edição</span></div>
+      <div class="trline"><span class="tc">8–15 s</span><span>Já gerei milhões de visualizações com a minha edição. Não, dezenas de milhões a esta altura.</span><span class="en">I've generated millions of views through my editing. No, tens of millions at this point.</span><span class="vis">Página do canal de um cliente · "989k views", "1M views", "1.4M", "1.5M" · "10M+ views generated" sobre comentários elogiosos</span></div>
+      <div class="trline"><span class="tc">15–25 s</span><span>Uso DaVinci Resolve, Premiere Pro e Photoshop. No DaVinci faço tudo: cortes, animações gráficas, design de áudio e até animação 3D.</span><span class="en">I'm a user of DaVinci Resolve, Premiere Pro and Photoshop. In DaVinci I do all my work, from cutting, motion graphics, audio designing and even 3D animations.</span><span class="vis">Ícones dos programas com "2+ years", "4+ years" · linha desenhada à mão ligando exemplos de cada habilidade</span></div>
+      <div class="trline"><span class="tc">25–30 s</span><span>E no Premiere consigo chegar a 90% do… ah, tanto faz.</span><span class="en">And in Premiere I can match that 90% of the way… okay, whatever.</span><span class="vis">Linha do tempo do Premiere → clarão branco → cartela "see more at" com site e redes</span></div>
+    </div>
+  </div>
+  <p class="note">Transcrição feita com o modelo Whisper e revisada com o que aparece na tela. Em S2, o modelo ouviu "great editors"; o texto na tela confirma "editing".</p>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">05 · Fichas</p>
+    <h2>O que levar de cada um</h2>
+  </div>
+  <div class="refs">
+    <div class="ref"><span class="tag">S1 · Motion design e 3D · 0:51</span><h3>Precisão de relojoeiro</h3>
+      <ul><li>Formato cinema (faixas pretas), passa sensação de filme.</li><li>Abertura e fechamento no mesmo fundo claro, com textos pequenos nos cantos, como um catálogo.</li><li>Produtos em 3D, cada um com a própria paleta, cortados na batida.</li><li>Telas divididas em dois quadros que se completam.</li></ul>
+      <p class="steal"><b>Leve daqui:</b> a disciplina de cortar exatamente na batida e abrir e fechar com a mesma cartela.</p></div>
+    <div class="ref"><span class="tag">S2 · Editor de vídeo · 0:46</span><h3>Roteiro que se prova</h3>
+      <ul><li>Narração escrita como manifesto: frases curtas, uma promessa por frase.</li><li>Cada promessa demonstrada na mesma hora.</li><li>A música respira junto com o texto ("desacelerar").</li><li>Termina mostrando os bastidores.</li></ul>
+      <p class="steal"><b>Leve daqui:</b> escrever o roteiro como lista de promessas e reservar uma imagem-prova para cada uma.</p></div>
+    <div class="ref"><span class="tag">S3 · Editor de YouTube · 0:30</span><h3>Personalidade vende</h3>
+      <ul><li>Fala em primeira pessoa, informal, com humor.</li><li>Números grandes subindo como placar.</li><li>O próprio material de trabalho (linhas do tempo) vira cenário.</li><li>30 segundos bastam.</li></ul>
+      <p class="steal"><b>Leve daqui:</b> mostrar resultados em números e deixar escapar um momento humano.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">06 · Checklist</p>
+    <h2>Antes de publicar um showreel</h2>
+    <ul class="check">
+      <li>Existe um motivo especial para este vídeo agora (lançamento, marco, retrospectiva, portfólio).</li>
+      <li>A música foi escolhida primeiro, é licenciada e tem uma subida no começo e um respiro antes do fim.</li>
+      <li>As batidas estão marcadas e os cortes caem nos golpes fortes.</li>
+      <li>Só entram os melhores momentos. Na dúvida, corte.</li>
+      <li>Os primeiros 5 segundos já mostram o nível do trabalho.</li>
+      <li>Cada trecho mostra uma técnica diferente.</li>
+      <li>Se houver narração, cada frase tem sua imagem-prova.</li>
+      <li>Texto só em palavras-chave, tratado como design.</li>
+      <li>Há prova de resultado: logos de clientes, números ou depoimentos.</li>
+      <li>Termina com nome e site, sem lista longa de redes.</li>
+      <li>Duração entre 30 e 60 segundos.</li>
+      <li>Volume por volta de −14 LUFS, pico até −1 dB.</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose">
+    <p class="eyebrow">Como esta análise foi feita</p>
+    <p>Os cortes foram detectados pela diferença entre quadros; mudanças com menos de 0,3 s de distância contam como uma só. O andamento da música e a força de cada batida foram medidos com análise de áudio, e a coincidência entre corte e batida foi conferida trecho a trecho. As narrações foram transcritas com o modelo Whisper em janelas de 4 segundos. O visual foi lido em quadros a cada segundo, e a cada 0,25 a 0,33 s nas aberturas. O estilo exato da música e dos efeitos sonoros não foi ouvido, foi deduzido das medições.</p>
+  </div>
+</section>
+</div>
+
+<script>
+const R=[
+ {n:"S1 · Motion design",d:50.9,
+  c:[2.97,4.63,7.2,7.53,8.0,8.33,8.67,9.0,9.47,11.07,11.4,12.07,13.3,14.53,15.17,15.77,16.5,17.17,17.77,18.53,19.13,19.73,20.33,20.93,21.6,22.87,23.57,24.17,25.37,26.03,26.7,27.3,28.03,28.7,30.5,31.67,32.43,34.97,36.33,38.2,38.53,39.5,40.7,41.83,43.3,44.5,45.8],
+  e:[-31,-23,-20,-19,-20,-17,-17,-13,-16,-12,-12,-12,-11,-15,-12,-11,-13,-12,-18,-12,-11,-13,-11,-15,-13,-11,-11,-12,-14,-13,-11,-14,-11,-13,-13,-11,-13,-11,-16,-14,-11,-14,-12,-12,-15,-11,-12,-12,-17,-44],v:[]},
+ {n:"S2 · Editor (narrado)",d:45.6,
+  c:[1.71,8.62,9.33,11.75,12.96,14.88,15.62,16.21,18.12,18.92,19.29,19.62,20.0,21.17,23.25,25.83,29.96,30.29,30.67,31.08,31.42,31.83,32.25,32.71,33.17,35.12,36.04,38.67,39.0,39.5,40.21,40.96,41.83,42.21],
+  e:[-13,-13,-15,-15,-19,-14,-15,-20,-14,-17,-15,-15,-17,-13,-14,-15,-16,-13,-14,-15,-26,-13,-17,-15,-17,-17,-14,-15,-15,-16,-18,-14,-13,-13,-27,-12,-15,-15,-30,-13,-13,-17,-13,-13,-15],v:[[0,45.6]]},
+ {n:"S3 · Editor (fala própria)",d:30.1,
+  c:[1.08,4.25,7.96,8.46,9.5,10.0,10.79,11.38,12.54,25.0,29.83],
+  e:[-12,-18,-14,-13,-9,-13,-13,-11,-11,-11,-13,-15,-12,-13,-12,-14,-14,-12,-13,-13,-14,-14,-12,-13,-14,-12,-16,-19,-20,-15],v:[[0,29]]}
+];
+const MAX=52, tl=document.getElementById('tl'), NS='http://www.w3.org/2000/svg';
+const mk=(t,a)=>{const el=document.createElementNS(NS,t);for(const k in a)el.setAttribute(k,a[k]);return el};
+const X=t=>t/MAX*1000, Y=db=>{const v=Math.max(-45,Math.min(-8,db));return 62-(v+45)/37*54};
+R.forEach(r=>{
+  const row=document.createElement('div');row.className='tl-row';
+  const lab=document.createElement('div');lab.className='lab';
+  lab.innerHTML=r.n+'<small>'+Math.round(r.d)+' s · '+r.c.length+' cortes</small>';
+  const s=mk('svg',{viewBox:'0 0 1000 70',preserveAspectRatio:'none',role:'img','aria-label':r.n+': energia da música e '+r.c.length+' cortes'});
+  r.v.forEach(([a,b])=>s.append(mk('rect',{x:X(a),y:64,width:X(b)-X(a),height:5,rx:2,fill:'var(--cue)',opacity:.55})));
+  let p='M0,62 '+r.e.map((db,i)=>'L'+X(i+.5).toFixed(1)+','+Y(db).toFixed(1)).join(' ')+' L'+X(r.d).toFixed(1)+',62 Z';
+  s.append(mk('path',{d:p,fill:'var(--wave)',opacity:.6}));
+  s.append(mk('rect',{x:0,y:62,width:X(r.d),height:1.5,fill:'var(--line)'}));
+  r.c.forEach(t=>s.append(mk('rect',{x:X(t)-1.2,y:4,width:2.4,height:58,rx:1,fill:'var(--rec)',opacity:.85})));
+  row.append(lab,s);tl.append(row);
+});
+const lg=document.createElement('div');lg.className='legend';
+lg.innerHTML='<span><i style="background:var(--wave)"></i>energia da música (−45 a −8 dB)</span><span><i style="background:var(--rec)"></i>corte</span><span><i style="background:var(--cue)"></i>trecho com narração</span><span class="tc">escala: 0 a 52 s</span>';
+tl.append(lg);
+</script>

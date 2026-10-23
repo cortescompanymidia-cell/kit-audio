@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Instala o kit de áudio: bibliotecas Python e modelos (~3 GB). Pode rodar de novo sem problema; só baixa o que falta.
+# Instala o kit de áudio: bibliotecas Python e modelos (~3,5 GB). Pode rodar de novo sem problema; só baixa o que falta.
 set -e
 cd "$(dirname "$0")"
 mkdir -p modelos
@@ -12,6 +12,10 @@ baixa audio-tagging-models/sherpa-onnx-ced-base-audio-tagging-2024-04-19.tar.bz2
 baixa asr-models/sherpa-onnx-whisper-medium.tar.bz2 sherpa-onnx-whisper-medium &
 baixa_arq speech-enhancement-models/gtcrn_simple.onnx gtcrn_simple.onnx &
 baixa_arq asr-models/silero_vad.onnx silero_vad.onnx &
+mkdir -p modelos/kokoro
+K=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
+[ -e modelos/kokoro/kokoro-v1.0.onnx ] || curl -fsSL -o modelos/kokoro/kokoro-v1.0.onnx $K/kokoro-v1.0.onnx &
+[ -e modelos/kokoro/voices-v1.0.bin ] || curl -fsSL -o modelos/kokoro/voices-v1.0.bin $K/voices-v1.0.bin &
 wait
 command -v ffmpeg >/dev/null || echo "ATENÇÃO: instale o ffmpeg (apt install ffmpeg / brew install ffmpeg)"
 echo "Kit pronto."

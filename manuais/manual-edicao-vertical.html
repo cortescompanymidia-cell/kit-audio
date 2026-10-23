@@ -1,0 +1,404 @@
+<title>Manual de Edição Vertical</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;600&family=Bangers&family=Montserrat:wght@800;900&family=Inter:wght@600&display=swap">
+<style>
+/* Layout: uma "ilha de edição" em página única: linhas do tempo reais no topo, regras numeradas (são uma sequência de produção), fichas e checklist no fim. */
+:root{
+  --bg:#F2F3F6; --surface:#FFFFFF; --ink:#16181D; --muted:#5A6070; --line:#D9DCE3;
+  --rec:#E0353B;      /* playhead / marcador de corte */
+  --cue:#2A57C0;      /* transição animada */
+  --tint:#FBE9EA;     /* faixa do gancho */
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111318; --surface:#1A1D24; --ink:#E8EAF0; --muted:#9AA1B2; --line:#2C303A;
+    --rec:#FF5A5F; --cue:#6E95FF; --tint:#2A1A1D; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111318; --surface:#1A1D24; --ink:#E8EAF0; --muted:#9AA1B2; --line:#2C303A;
+  --rec:#FF5A5F; --cue:#6E95FF; --tint:#2A1A1D; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:0 64px}
+.wrap{max-width:980px;margin:0 auto}
+.prose{max-width:66ch}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;line-height:1.1;margin:0}
+h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.5rem,3.6vw,2.1rem);font-weight:800;letter-spacing:-.01em}
+h3{font-size:1.15rem;font-weight:800}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.tc{font-family:var(--mono);font-variant-numeric:tabular-nums}
+section{padding-block:56px 0;display:grid;gap:22px}
+hr{border:0;border-top:1px solid var(--line);margin:56px 0 0}
+
+/* topo */
+header{padding-block:48px 0;display:grid;gap:18px}
+.slate{display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.slate b{color:var(--ink);font-weight:600}
+.lede{font-size:1.2rem;max-width:60ch}
+
+/* linhas do tempo */
+.tl{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 18px 10px;display:grid;gap:14px}
+.tl-row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}
+.tl-row .lab{font-size:.9rem;line-height:1.25;min-width:0}
+.tl-row .lab small{display:block;color:var(--muted);font-family:var(--mono);font-size:.72rem}
+.tl svg{width:100%;height:34px;display:block;overflow:visible}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.82rem;color:var(--muted);padding-top:4px;border-top:1px solid var(--line)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+@media (max-width:620px){.tl-row{grid-template-columns:1fr;gap:4px}}
+
+/* tabela */
+.tablebox{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:720px;font-size:.92rem}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+
+/* regras */
+.rules{display:grid;gap:0;counter-reset:r}
+.rule{display:grid;grid-template-columns:64px 1fr;gap:18px;padding-block:26px;border-top:1px solid var(--line)}
+.rule:first-child{border-top:0}
+.rule .num{font-family:var(--mono);font-size:.8rem;color:var(--rec);padding-top:6px}
+.rule .body{display:grid;gap:10px;min-width:0}
+.rule .data{font-family:var(--mono);font-size:.82rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px 12px}
+.rule ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+@media (max-width:560px){.rule{grid-template-columns:1fr;gap:6px}}
+
+/* telas de celular (maquetes) */
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px}
+.ph{display:grid;gap:8px;min-width:0}
+.screen{aspect-ratio:9/16;max-width:100%;border-radius:14px;position:relative;overflow:hidden;background:#20242c;border:1px solid var(--line)}
+.ph p{font-size:.88rem;color:var(--muted);line-height:1.4}
+.ph h3{font-size:1rem}
+.blurbg{position:absolute;inset:0;background:radial-gradient(circle at 40% 30%,#5b6b74,#2b3238 70%);filter:blur(6px);transform:scale(1.1)}
+.mid169{position:absolute;left:0;right:0;top:34%;height:31%;background:linear-gradient(135deg,#3d4a52,#6f7f86);display:grid;place-items:center}
+.person{width:26%;aspect-ratio:1/1.25;border-radius:50% 50% 12% 12%;background:#c9a68b;opacity:.9}
+.full{position:absolute;inset:0;background:linear-gradient(180deg,#4b3a52,#2a2230);display:grid;place-items:end center}
+.full .person{width:58%;margin-bottom:0}
+.top{position:absolute;left:0;right:0;top:0;height:50%;background:linear-gradient(135deg,#d26b3b,#8a3b5a)}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:50%;background:#3a2f2a;display:grid;place-items:end center}
+.bottom .person{width:44%}
+.broll{position:absolute;inset:0;background:linear-gradient(160deg,#6f8a5a,#2e3a26)}
+.cap{position:absolute;left:0;right:0;text-align:center;padding:0 6px}
+
+/* estilos de legenda */
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px}
+.capcard{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:grid;min-width:0}
+.capstage{height:150px;display:grid;place-items:center;background:linear-gradient(135deg,#39424b,#1d2228);padding:0 10px}
+.capcard .meta{padding:14px;display:grid;gap:6px;font-size:.9rem}
+.capcard .meta b{font-family:var(--display);font-size:1rem}
+.s-comic{font-family:"Bangers","Impact",sans-serif;font-size:2.3rem;color:#fff;letter-spacing:.02em;font-style:italic;
+  -webkit-text-stroke:2px #000;paint-order:stroke fill;text-shadow:0 4px 0 #000,0 0 14px rgba(0,0,0,.6)}
+.s-comic .k{color:#3BE36A}
+.s-pill{font-family:"Inter",system-ui,sans-serif;font-weight:600;font-size:1.05rem;color:#fff;background:#000;padding:4px 10px;border-radius:6px}
+.s-kara{font-family:"Inter",system-ui,sans-serif;font-weight:600;font-size:1.15rem;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.6)}
+.s-kara .on{background:#111;padding:1px 6px;border-radius:5px}
+.s-yellow{font-family:"Montserrat",system-ui,sans-serif;font-weight:900;font-size:1.45rem;color:#FFD31A;text-transform:uppercase;letter-spacing:.01em;
+  text-shadow:0 2px 0 #000,2px 0 0 #000,-2px 0 0 #000,0 -2px 0 #000,0 4px 10px rgba(0,0,0,.5)}
+
+/* estrutura */
+.arc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface)}
+.arc div{padding:14px;border-left:1px solid var(--line);display:grid;gap:6px;align-content:start;min-width:0}
+.arc div:first-child{border-left:0;background:var(--tint)}
+.arc .tc{font-size:.78rem;color:var(--rec)}
+.arc b{font-family:var(--display)}
+.arc p{font-size:.9rem;color:var(--muted);line-height:1.4}
+@media (max-width:760px){.arc{grid-template-columns:1fr}.arc div{border-left:0;border-top:1px solid var(--line)}.arc div:first-child{border-top:0}}
+
+/* fichas */
+.refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.ref{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;display:grid;gap:10px;align-content:start;min-width:0}
+.ref .tag{font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+.ref ul{margin:0;padding-left:1.1em;display:grid;gap:4px;font-size:.95rem}
+.ref .steal{border-top:1px dashed var(--line);padding-top:10px;font-size:.93rem}
+.ref .steal b{color:var(--rec)}
+
+/* checklist */
+.check{display:grid;gap:8px;list-style:none;padding:0;margin:0}
+.check li{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+.check li::before{content:"";width:16px;height:16px;border:2px solid var(--ink);border-radius:4px;margin-top:5px}
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.specs div{background:var(--surface);padding:14px;display:grid;gap:2px}
+.specs .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.specs .v{font-family:var(--mono);font-weight:600}
+.note{font-size:.92rem;color:var(--muted);border-left:3px solid var(--line);padding-left:14px}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="eyebrow">Manual de edição · vídeos verticais 9:16</p>
+  <h1>Como se edita um vídeo curto que segura a atenção</h1>
+  <p class="lede">Este manual foi escrito a partir da análise quadro a quadro e do áudio de 5 vídeos de referência, em três nichos diferentes. A ideia não é copiar nenhum deles. É entender as decisões de edição que eles têm em comum e saber aplicá-las em qualquer assunto.</p>
+  <div class="slate">
+    <span>REFERÊNCIAS <b>5</b></span>
+    <span>DURAÇÃO TOTAL <b class="tc">6min37s</b></span>
+    <span>NICHOS <b>política · cinema · tecnologia</b></span>
+    <span>FORMATO <b>1080×1920</b></span>
+  </div>
+</header>
+
+<section>
+  <div class="prose" style="display:grid;gap:10px">
+    <p class="eyebrow">01 · O ritmo em números</p>
+    <h2>Onde a imagem muda, segundo a segundo</h2>
+    <p>Cada traço abaixo é um momento em que a imagem mudou de verdade: um corte, uma troca de cena, um gráfico entrando ou uma transição animada. A faixa colorida marca os primeiros 10 segundos. Repare como quase todos os vídeos concentram mudanças no começo e depois relaxam.</p>
+  </div>
+  <div class="tl" id="tl"></div>
+</section>
+
+<section>
+  <div class="tablebox">
+    <table>
+      <thead><tr><th>Referência</th><th>Duração</th><th>Mudanças visuais</th><th>Intervalo médio</th><th>Nos 10s iniciais</th><th>Silêncio</th><th>Volume (LUFS)</th><th>Legenda</th></tr></thead>
+      <tbody>
+        <tr><td>A · Explicador político</td><td class="n">1:45</td><td class="n">18</td><td class="n">5,5 s</td><td class="n">2</td><td class="n">3,5%</td><td class="n">−24</td><td>Quadrinho, 1–2 palavras</td></tr>
+        <tr><td>B · Explicador político</td><td class="n">0:59</td><td class="n">16</td><td class="n">3,5 s</td><td class="n">5</td><td class="n">4,4%</td><td class="n">−24</td><td>Quadrinho + palavra verde</td></tr>
+        <tr><td>C · Cinema e arte</td><td class="n">1:00</td><td class="n">23</td><td class="n">2,5 s</td><td class="n">11</td><td class="n">0,7%</td><td class="n">−17</td><td>Pílula preta, 2–3 palavras</td></tr>
+        <tr><td>D · Cinema e roteiro</td><td class="n">1:13</td><td class="n">25</td><td class="n">2,8 s</td><td class="n">8</td><td class="n">0,6%</td><td class="n">−14</td><td>Karaokê, palavra em destaque</td></tr>
+        <tr><td>E · Tecnologia</td><td class="n">1:41</td><td class="n">13</td><td class="n">7,2 s</td><td class="n">2 (uma é animação de 3,4 s)</td><td class="n">3,2%</td><td class="n">−17</td><td>Amarela, caixa alta</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">"Silêncio" é a parte do vídeo com som muito abaixo da fala. Em todos ficou abaixo de 5%, e nenhuma pausa passou de 0,3 segundo. "Volume" é a medida padrão de loudness: quanto mais perto de zero, mais alto. A e B parecem ser do mesmo criador; C e D usam estéticas parecidas de "cinema".</p>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose" style="display:grid;gap:10px">
+    <p class="eyebrow">02 · As regras</p>
+    <h2>Dez decisões que os cinco vídeos tomam</h2>
+    <p>Estão na ordem em que aparecem no trabalho: primeiro o roteiro e o gancho, depois a montagem, por fim o som e a entrega.</p>
+  </div>
+  <div class="rules">
+    <div class="rule"><div class="num">R01</div><div class="body">
+      <h3>O gancho começa no primeiro quadro</h3>
+      <p>Nenhum vídeo começa com "olá" ou apresentação. A primeira frase já é o assunto, e a imagem muda cedo para confirmar que algo vai acontecer.</p>
+      <ul>
+        <li><b>Mudança visual cedo:</b> C muda a imagem em 0,7 s, B em 1,5 s, D em 1,7 s. O vídeo E abre com uma animação de tipografia trocando a cada 0,2 s durante 3,4 s.</li>
+        <li><b>Frase de tensão:</b> "E você aí nem reparou!", "o trabalho desse artista marcou sua infância, mas você não sabe o nome dele". A frase cria uma lacuna que só o vídeo fecha.</li>
+        <li><b>Título visual nos primeiros segundos:</b> D e C colocam o nome da série na tela ("ep. 01"), o que promete continuidade.</li>
+      </ul>
+    </div></div>
+
+    <div class="rule"><div class="num">R02</div><div class="body">
+      <h3>Zero respiração morta</h3>
+      <p>Toda pausa, respiração e "é…" é cortada. A fala fica contínua, como se o apresentador nunca parasse para pensar.</p>
+      <div class="data">silêncio no vídeo: 0,6% a 4,4% · maior pausa encontrada: 0,3 s · pausas &gt; 0,25 s por minuto: 0 a 1,2</div>
+      <p><b>Como fazer:</b> grave com folga e depois corte cada pausa maior que um quarto de segundo. Se o corte "pular" o rosto, esconda com um zoom leve (R04) ou com um gráfico por cima.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">R03</div><div class="body">
+      <h3>Edição mais densa no começo, mais calma depois</h3>
+      <p>Os vídeos gastam o maior esforço de montagem nos primeiros 10 segundos, quando o espectador decide se fica. Depois, o intervalo entre mudanças cresce.</p>
+      <div class="data">C: 11 mudanças nos 10 s iniciais → depois, uma a cada 4,2 s · D: 8 → uma a cada 3,7 s · B: 5 → uma a cada 4,4 s</div>
+    </div></div>
+
+    <div class="rule"><div class="num">R04</div><div class="body">
+      <h3>Algo se mexe o tempo todo, mesmo sem corte</h3>
+      <p>Os vídeos com menos cortes (A e E) compensam com outras camadas em movimento: a legenda troca a cada meio segundo, há zoom de aproximação nos cortes de rosto, e gráficos vão sendo montados aos poucos.</p>
+      <ul>
+        <li><b>Punch-in:</b> no corte entre duas frases, o rosto aparece mais perto (zoom de 10 a 20%). Disfarça o salto e dá ênfase.</li>
+        <li><b>Zoom lento em imagens paradas:</b> fotos e ilustrações nunca ficam estáticas; aproximam ou se movem devagar.</li>
+        <li><b>Gráfico que cresce:</b> em A, uma lista de poderes do presidente ganha um item a cada bloco do roteiro. Em B, um esquema do mandato vai sendo preenchido. O espectador acompanha a construção.</li>
+      </ul>
+    </div></div>
+
+    <div class="rule"><div class="num">R05</div><div class="body">
+      <h3>Legenda curta, sincronizada palavra a palavra</h3>
+      <p>Todos legendam tudo, mas nunca como bloco de texto. Aparece de 1 a 4 palavras por vez, trocando junto com a fala. Isso segura quem assiste sem som e dá ritmo à tela. Os estilos aparecem na seção 03.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">R06</div><div class="body">
+      <h3>Mostre aquilo que você está dizendo</h3>
+      <p>Toda vez que a fala cita algo concreto, a imagem mostra: um nome vira retrato com o nome escrito, um livro vira a capa, um número vira gráfico, um anúncio vira o print do site.</p>
+      <ul>
+        <li>D: cada pessoa citada aparece em retrato preto e branco, com o nome em fonte serifada por cima.</li>
+        <li>E: "essa planilha aqui" → a planilha ocupa a metade de baixo da tela no mesmo instante.</li>
+        <li>C: cada obra citada aparece, e um círculo vermelho pontilhado aponta o detalhe que está sendo explicado.</li>
+      </ul>
+    </div></div>
+
+    <div class="rule"><div class="num">R07</div><div class="body">
+      <h3>Um recurso de destaque, sempre o mesmo</h3>
+      <p>Cada criador escolhe um jeito de dizer "olhe isto" e repete sempre: a palavra-chave em verde (B), a palavra falada dentro de uma caixa preta (D), o círculo pontilhado vermelho (C), o trecho grifado em laranja num print (E). Um recurso só, usado com disciplina, ensina o espectador a ler o vídeo.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">R08</div><div class="body">
+      <h3>Identidade visual que se reconhece em um quadro</h3>
+      <p>Mesma fonte, mesma paleta, mesmo cenário e às vezes um personagem fixo. Em A e B, o presidente é sempre a mesma figura de terno e faixa com o rosto coberto por um círculo vermelho, e isso também evita mostrar políticos reais. C e D usam numeração de série ("EP.05", "ep. 01") e tipografia de cinema.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">R09</div><div class="body">
+      <h3>Música por baixo de tudo, voz sempre na frente</h3>
+      <p>Em C, D e E, o som nunca cai abaixo de certo nível: há uma trilha contínua uns 15 dB abaixo da voz. Em A e B a trilha é mais discreta. Em B os cortes coincidem com picos de som agudo, típico de "whoosh" nas transições.</p>
+      <div class="data">piso do áudio: C −35 dB, D −30 dB, E −37 dB (trilha presente) · A e B −44/−45 dB (trilha bem baixa) · pico agudo nos cortes de B: +5,5 dB acima do normal</div>
+      <p><b>Como fazer:</b> trilha instrumental sem vocal, 15 a 20 dB abaixo da fala. Efeito curto nas transições animadas, nunca em todos os cortes de rosto.</p>
+    </div></div>
+
+    <div class="rule"><div class="num">R10</div><div class="body">
+      <h3>Final curto, com um pedido só</h3>
+      <p>O fechamento tem de 5 a 8 segundos e um único pedido: "link na bio, às oito da noite, aula inaugural" (D) ou "mais notícias, toca aqui embaixo" (E). Nada de lista de redes sociais. O apresentador volta para a câmera nesse momento.</p>
+    </div></div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose" style="display:grid;gap:10px">
+    <p class="eyebrow">03 · Tela e legenda</p>
+    <h2>Quatro jeitos de ocupar a tela vertical</h2>
+    <p>Os vídeos alternam entre esses formatos dentro do mesmo vídeo. A troca de formato já conta como mudança visual.</p>
+  </div>
+  <div class="phones">
+    <div class="ph"><div class="screen"><div class="blurbg"></div><div class="mid169"><div class="person"></div></div><div class="cap s-comic" style="bottom:16%;font-size:1.1rem;-webkit-text-stroke:1px #000">O CARGO MAIS</div></div>
+      <h3>Horizontal sobre fundo desfocado</h3><p>Imagem 16:9 no centro e uma cópia ampliada e desfocada preenchendo o resto. Legenda na faixa de baixo. Usado em A e B.</p></div>
+    <div class="ph"><div class="screen"><div class="top"></div><div class="bottom"><div class="person"></div></div><div class="cap s-pill" style="top:48%;left:22%;right:22%;font-size:.6rem;padding:2px 4px">nome dele</div></div>
+      <h3>Tela dividida</h3><p>Imagem de apoio em cima, apresentador embaixo. A legenda fica na linha de divisão. Usado em C e E.</p></div>
+    <div class="ph"><div class="screen"><div class="full"><div class="person"></div></div><div class="cap s-yellow" style="top:52%;font-size:.75rem">direto ao ponto</div></div>
+      <h3>Rosto em tela cheia</h3><p>Para frases de opinião e para o final. A legenda fica no meio da tela, abaixo do queixo. Usado em todos.</p></div>
+    <div class="ph"><div class="screen"><div class="broll"></div><div class="cap s-kara" style="bottom:22%;font-size:.7rem">usa <span class="on">luz</span> e silhueta</div></div>
+      <h3>Imagem de apoio em tela cheia</h3><p>Só a imagem, com a voz por cima. Bom para mostrar detalhe, com zoom lento ou um marcador apontando. Usado em C e D.</p></div>
+  </div>
+
+  <div class="prose" style="display:grid;gap:10px;padding-top:18px">
+    <h2>Quatro estilos de legenda</h2>
+    <p>Escolha um e mantenha o vídeo inteiro. O estilo diz muito sobre o tom do canal.</p>
+  </div>
+  <div class="caps">
+    <div class="capcard"><div class="capstage"><span class="s-comic">PODER <span class="k">TOTAL</span></span></div>
+      <div class="meta"><b>Quadrinho</b><span>Fonte de HQ em itálico, branca com contorno preto grosso, 1 a 2 palavras. Palavra-chave em verde. Tom didático e animado. (A, B)</span></div></div>
+    <div class="capcard"><div class="capstage"><span class="s-pill">por criar o visual</span></div>
+      <div class="meta"><b>Pílula</b><span>Texto pequeno, sem serifa, em caixa preta arredondada, 2 a 4 palavras. Discreto, deixa a imagem falar. Tom de documentário. (C)</span></div></div>
+    <div class="capcard"><div class="capstage"><span class="s-kara">Mas <span class="on">quem</span> trouxe</span></div>
+      <div class="meta"><b>Karaokê</b><span>Frase curta em branco, com a palavra que está sendo dita dentro de uma caixa escura. Guia o olho no ritmo da voz. (D)</span></div></div>
+    <div class="capcard"><div class="capstage"><span class="s-yellow">Nem reparou!</span></div>
+      <div class="meta"><b>Manchete amarela</b><span>Caixa alta, fonte muito pesada, amarela com contorno escuro, 2 a 3 palavras. Tom de notícia e urgência. (E)</span></div></div>
+  </div>
+  <p class="note">Os quadros acima são maquetes desenhadas para este manual, não imagens dos vídeos. As fontes se aproximam das usadas: Bangers ou Komika para o quadrinho, Inter ou Helvetica para pílula e karaokê, Montserrat Black para a manchete.</p>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose" style="display:grid;gap:10px">
+    <p class="eyebrow">04 · Roteiro</p>
+    <h2>A estrutura que se repete em 60 a 100 segundos</h2>
+  </div>
+  <div class="arc">
+    <div><span class="tc">0–5 s</span><b>Gancho</b><p>A frase mais forte do vídeo e uma mudança visual antes de 2 s.</p></div>
+    <div><span class="tc">5–15 s</span><b>Contexto</b><p>O mínimo para entender o assunto, com uma imagem de apoio por ideia.</p></div>
+    <div><span class="tc">15–70 s</span><b>Blocos</b><p>De 3 a 6 blocos de 8 a 15 s, cada um com sua imagem ou etapa do gráfico.</p></div>
+    <div><span class="tc">últimos 15 s</span><b>Virada</b><p>A conclusão ou o "por que isso importa", de volta ao rosto.</p></div>
+    <div><span class="tc">5–8 s</span><b>Pedido</b><p>Uma ação só: seguir, link na bio, comentar.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose" style="display:grid;gap:10px">
+    <p class="eyebrow">05 · Fichas</p>
+    <h2>O que aprender com cada referência</h2>
+  </div>
+  <div class="refs">
+    <div class="ref"><span class="tag">A · Explicador político · 1:45 · 24 qps</span><h3>Gráfico que cresce</h3>
+      <ul><li>Vídeo gravado na horizontal, sobre fundo desfocado da própria imagem.</li><li>Ilustração com rosto coberto representando "o presidente", repetida o vídeo todo.</li><li>Lista de poderes que ganha um item por bloco.</li><li>Foto de notícia em preto e branco com palavra de impacto ("TÁ FEITO!").</li></ul>
+      <p class="steal"><b>Leve daqui:</b> organizar uma explicação longa como uma lista que vai se completando na tela.</p></div>
+    <div class="ref"><span class="tag">B · Explicador político · 0:59 · 24 qps</span><h3>Colagem animada</h3>
+      <ul><li>Abre com o rosto bem perto da câmera, gesticulando.</li><li>Em 1,5 s já entra uma colagem: prédio recortado, formas com retícula, etiquetas vermelhas e azuis.</li><li>Mapa do Brasil comparando "proporcional" e "3 por estado".</li><li>Palavra-chave da legenda em verde.</li></ul>
+      <p class="steal"><b>Leve daqui:</b> transformar comparação em imagem lado a lado; verde só para a palavra que importa.</p></div>
+    <div class="ref"><span class="tag">C · Cinema e arte · 1:00 · 24 qps</span><h3>A imagem é protagonista</h3>
+      <ul><li>Abre com 4 obras trocando a cada meio segundo, antes de o rosto aparecer.</li><li>Cartela de série em tipografia serifada elegante.</li><li>Várias imagens empilhadas na vertical para comparar.</li><li>Círculo vermelho pontilhado apontando o detalhe citado.</li></ul>
+      <p class="steal"><b>Leve daqui:</b> quando o assunto é visual, mostre primeiro e fale depois.</p></div>
+    <div class="ref"><span class="tag">D · Cinema e roteiro · 1:13 · 24 qps</span><h3>Documentário em miniatura</h3>
+      <ul><li>Retratos preto e branco com nome em serifada sobre a imagem.</li><li>Gráfico circular de 12 etapas que gira e reaparece.</li><li>Tela dividida com entrevista de arquivo em cima.</li><li>Áudio mais alto da série (−14 LUFS) e trilha contínua.</li></ul>
+      <p class="steal"><b>Leve daqui:</b> um gráfico-símbolo que representa o conceito e volta várias vezes.</p></div>
+    <div class="ref"><span class="tag">E · Tecnologia · 1:41 · 30 qps</span><h3>Notícia direta</h3>
+      <ul><li>Gancho com o nome do produto trocando de fonte a cada 0,2 s.</li><li>Cenário cheio de cor e luz neon ao fundo; o rosto sempre centralizado.</li><li>Prints e demonstrações na metade de baixo, com legenda amarela na divisão.</li><li>Trecho importante do texto grifado em laranja.</li></ul>
+      <p class="steal"><b>Leve daqui:</b> mostrar a prova (print, planilha, demonstração) no exato momento da frase.</p></div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose" style="display:grid;gap:10px">
+    <p class="eyebrow">06 · Entrega</p>
+    <h2>Configuração de exportação</h2>
+  </div>
+  <div class="specs">
+    <div><span class="k">Resolução</span><span class="v">1080 × 1920</span></div>
+    <div><span class="k">Quadros por segundo</span><span class="v">24 ou 30</span></div>
+    <div><span class="k">Vídeo</span><span class="v">H.264 · 2 a 4 Mbps</span></div>
+    <div><span class="k">Áudio</span><span class="v">AAC · 44,1 kHz · estéreo</span></div>
+    <div><span class="k">Volume final</span><span class="v">−14 LUFS</span></div>
+    <div><span class="k">Pico máximo</span><span class="v">−1 dBTP</span></div>
+  </div>
+  <p class="note">A e B saíram em −24 LUFS, bem mais baixos que os outros. Nas redes, um vídeo baixo parece "fraco" ao lado do vizinho no feed; −14 LUFS é o padrão mais seguro. O vídeo E chegou a passar de 0 dB de pico, o que pode distorcer em alguns celulares.</p>
+
+  <div class="prose" style="display:grid;gap:12px;padding-top:12px">
+    <h2>Checklist antes de publicar</h2>
+    <ul class="check">
+      <li>A primeira frase já é o assunto, sem cumprimento.</li>
+      <li>A imagem muda antes dos 2 segundos.</li>
+      <li>Nenhuma pausa maior que um quarto de segundo.</li>
+      <li>Nos primeiros 10 segundos há pelo menos 4 mudanças visuais.</li>
+      <li>Depois disso, nada fica parado por mais de 5 segundos (corte, zoom, gráfico ou legenda).</li>
+      <li>Legenda em todo o vídeo, 1 a 4 palavras por vez, num estilo só.</li>
+      <li>Tudo o que é citado aparece na tela no mesmo instante.</li>
+      <li>Um único recurso de destaque, usado sempre do mesmo jeito.</li>
+      <li>Trilha sem vocal, bem abaixo da voz; efeito sonoro só nas transições animadas.</li>
+      <li>Final com um pedido só, em até 8 segundos.</li>
+      <li>Exportado em 1080×1920, por volta de −14 LUFS.</li>
+    </ul>
+  </div>
+</section>
+
+<hr>
+
+<section>
+  <div class="prose" style="display:grid;gap:10px">
+    <p class="eyebrow">Como esta análise foi feita</p>
+    <p>Os cortes foram detectados automaticamente pela diferença entre quadros. Mudanças com menos de 0,4 s de distância foram contadas como uma só, já que costumam ser uma transição animada. O visual foi lido em quadros a cada 2 segundos, e a cada meio segundo nos ganchos. O áudio foi medido por nível e loudness, sem escuta. Por isso o tipo de trilha e de efeito sonoro é deduzido dos números, não ouvido. Zooms suaves e trocas de legenda não entram na contagem de cortes, então o ritmo real percebido é ainda mais rápido do que a tabela mostra.</p>
+  </div>
+</section>
+</div>
+
+<script>
+const V=[
+ {n:"A · Político",d:104.9,e:[5.7,7.3,10.4,16.5,23.0,28.1,30.3,31.4,39.7,49.9,55.5,65.1,67.2,71.3,81.5,84.4,89.3,96.7],a:[]},
+ {n:"B · Político",d:58.7,e:[1.5,2.8,4.0,5.1,9.8,14.2,22.7,31.6,32.5,34.6,35.2,36.5,40.8,45.1,50.2,51.8],a:[2.8,4.0,9.8]},
+ {n:"C · Cinema e arte",d:60.3,e:[0.0,0.7,1.2,1.7,3.0,5.2,5.8,6.7,8.2,8.9,9.8,11.7,15.0,15.9,16.5,17.0,24.1,26.5,35.5,39.6,42.3,48.1,55.7],a:[1.7,3.0,5.8,6.7,9.8,17.0,35.5,39.6,42.3,48.1,55.7]},
+ {n:"D · Cinema e roteiro",d:72.7,e:[0.0,1.7,3.7,4.7,5.6,6.6,7.6,8.8,11.8,13.9,15.0,16.6,20.6,22.6,25.4,28.0,33.2,39.4,42.0,45.0,45.6,47.2,49.0,63.9,67.3],a:[1.7,3.7,8.8,11.8,15.0,20.6,22.6,25.4,28.0,33.2,39.4,47.2,63.9]},
+ {n:"E · Tecnologia",d:100.8,e:[0.2,6.8,10.2,14.5,18.1,24.0,38.7,42.3,46.4,49.8,61.2,83.8,89.0],a:[0.2]}
+];
+const MAX=105, tl=document.getElementById('tl'), NS='http://www.w3.org/2000/svg';
+const mk=(t,at)=>{const el=document.createElementNS(NS,t);for(const k in at)el.setAttribute(k,at[k]);return el};
+V.forEach(v=>{
+  const row=document.createElement('div');row.className='tl-row';
+  const lab=document.createElement('div');lab.className='lab';
+  lab.innerHTML=v.n+'<small>'+Math.floor(v.d/60)+':'+String(Math.round(v.d%60)).padStart(2,'0')+' · '+v.e.length+' mudanças</small>';
+  const s=mk('svg',{viewBox:'0 0 1000 34',preserveAspectRatio:'none',role:'img','aria-label':v.n+': '+v.e.length+' mudanças visuais'});
+  const W=v.d/MAX*1000;
+  s.append(mk('rect',{x:0,y:4,width:10/MAX*1000,height:26,fill:'var(--tint)'}));
+  s.append(mk('rect',{x:0,y:16,width:W,height:2,fill:'var(--line)'}));
+  s.append(mk('rect',{x:W-2,y:8,width:2,height:18,fill:'var(--muted)'}));
+  v.e.forEach(t=>{const anim=v.a.includes(t);
+    s.append(mk('rect',{x:t/MAX*1000-1.5,y:anim?6:8,width:3,height:anim?22:18,rx:1,fill:anim?'var(--cue)':'var(--rec)'}));});
+  row.append(lab,s);tl.append(row);
+});
+const lg=document.createElement('div');lg.className='legend';
+lg.innerHTML='<span><i style="background:var(--rec)"></i>corte ou troca de cena</span><span><i style="background:var(--cue)"></i>transição animada (vários quadros)</span><span><i style="background:var(--tint);border:1px solid var(--line)"></i>primeiros 10 s</span><span class="tc">escala: 0 a 105 s</span>';
+tl.append(lg);
+</script>

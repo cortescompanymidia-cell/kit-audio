@@ -6,3 +6,4 @@ soundfile
 pyloudnorm
 noisereduce
 pedalboard
+kokoro-onnx

@@ -1,0 +1,636 @@
+{
+ "arquivo": "v4.mp4",
+ "duracao_s": 72.72,
+ "medidas": {
+  "lufs": -14.0,
+  "pico_dbtp": -0.7,
+  "piso_ruido_db": -29.7,
+  "relacao_sinal_ruido_db": 17.3,
+  "chiado_s_pct": 10.3,
+  "zumbido": null
+ },
+ "mixagem": {
+  "voz_sobre_fundo_db": 0.1,
+  "ducking_db": null
+ },
+ "musica": {
+  "bpm": 120.2,
+  "batida_s": 0.499,
+  "eventos": [
+   {
+    "t": 2.0,
+    "tipo": "queda",
+    "db": -19.0
+   },
+   {
+    "t": 59.5,
+    "tipo": "subida",
+    "db": 64.4
+   },
+   {
+    "t": 72.0,
+    "tipo": "queda",
+    "db": -17.4
+   }
+  ],
+  "energia_db_meio_segundo": [
+   28.6,
+   -39.4,
+   -35.0,
+   -34.5,
+   -39.0,
+   -34.2,
+   -39.6,
+   -39.1,
+   -37.0,
+   -41.2,
+   -39.0,
+   -41.3,
+   -39.2,
+   -36.5,
+   -38.0,
+   -41.9,
+   -40.3,
+   -40.8,
+   -38.5,
+   -39.6,
+   -38.1,
+   -37.6,
+   -37.6,
+   -38.5,
+   -39.6,
+   -41.4,
+   -39.1,
+   -40.6,
+   -41.2,
+   -39.7,
+   -39.1,
+   -36.3,
+   -34.5,
+   -35.7,
+   -36.2,
+   -35.0,
+   -34.0,
+   -34.5,
+   -37.5,
+   -39.8,
+   -37.0,
+   -37.9,
+   -37.2,
+   -45.4,
+   -43.1,
+   -39.5,
+   -43.7,
+   -41.6,
+   -42.3,
+   -45.2,
+   -43.4,
+   -43.0,
+   -42.8,
+   -41.0,
+   -39.6,
+   -39.5,
+   -38.9,
+   -35.1,
+   -34.7,
+   -36.2,
+   -34.4,
+   -34.5,
+   -34.8,
+   -36.8,
+   -37.6,
+   -35.4,
+   -36.3,
+   -39.3,
+   -36.7,
+   -37.4,
+   -37.1,
+   -36.3,
+   -41.6,
+   -40.2,
+   -41.1,
+   -38.0,
+   -38.0,
+   -33.8,
+   -35.4,
+   -34.6,
+   -35.4,
+   -37.7,
+   -37.1,
+   -36.1,
+   -37.6,
+   -36.0,
+   -33.8,
+   -35.0,
+   -34.6,
+   -33.2,
+   -36.3,
+   -35.7,
+   -36.0,
+   -34.0,
+   -34.9,
+   -37.3,
+   -34.0,
+   -35.5,
+   -34.5,
+   -33.8,
+   -35.3,
+   -36.0,
+   -34.0,
+   -36.8,
+   -36.5,
+   -36.7,
+   -37.8,
+   -39.8,
+   -36.9,
+   -39.2,
+   -34.8,
+   -38.9,
+   -36.0,
+   -34.7,
+   -39.3,
+   -33.4,
+   -38.0,
+   -33.7,
+   -35.8,
+   29.1,
+   -36.9,
+   -35.1,
+   -33.7,
+   -35.0,
+   -37.8,
+   -38.3,
+   -35.6,
+   -36.3,
+   -36.3,
+   -37.1,
+   -41.4,
+   -37.8,
+   -39.3,
+   -38.1,
+   -34.6,
+   -36.3,
+   -35.8,
+   -35.8,
+   -33.2,
+   -36.9,
+   -38.8,
+   -38.8,
+   -43.4,
+   -44.3,
+   -58.7
+  ]
+ },
+ "fala": {
+  "trechos": [
+   [
+    0.07,
+    31.1
+   ],
+   [
+    31.21,
+    71.55
+   ],
+   [
+    71.66,
+    72.67
+   ]
+  ],
+  "percentual": 99.5,
+  "transcricao": [
+   {
+    "inicio": 0.07,
+    "fim": 31.1,
+    "texto": "Todo mundo já ouviu falar na Jornada do Herói, mas quase ninguém consegue explicar o que ela é. Nos próximos 12 dias, eu vou te entregar o segredo dos floteiristas de Hollywood, um passo por dia. Essa estrutura foi usada intencionalmente pela primeira vez pelo George Lucas. Ele pegou um molde que o Joseph Campbell tinha feito lá nos mitos antigos através do seu livro \"Hero with a Thousand Faces\". E adaptou pra fazer um filminho chamado \"Star Wars\", que talvez você deva conhecer. Mas quem trouxe a Jornada do Herói pra indústria de uma vez por todas foi esse cara aqui. Ele trabalhava na Disney e escreveu um memorando de sete..."
+   },
+   {
+    "inicio": 31.21,
+    "fim": 71.55,
+    "texto": "só que aplicada a filmes. O texto vazou e se espalhou para o Hollywood inteira na base do fax e do xerox na época antes da internet existir. O pessoal gostou tanto, ele teve que fazer um livro, \"A Jornada do Escritor\". Ele foi consultor para várias animações como \"O Rei Leão\" e \"Aladin\" também e vamos estudar tudo nessa série aqui no Instagram. O Vogler pegou esses 12 passos que quase toda boa história segue e transformando um mapa. É esse mapa que eu vou destrinchar com você. Cada dia você vai aprender uma etapa através dos seus filmes favoritos. Então você deixa a"
+   },
+   {
+    "inicio": 71.66,
+    "fim": 72.67,
+    "texto": "que você não pode perder."
+   }
+  ]
+ },
+ "efeitos": [
+  {
+   "t": 19.3,
+   "forca": 4.7,
+   "sons": [
+    [
+     "efeito de áudio",
+     "Effects unit",
+     0.24
+    ]
+   ]
+  }
+ ],
+ "golpes_musica": [
+  {
+   "t": 6.53,
+   "forca": 6.8
+  },
+  {
+   "t": 13.89,
+   "forca": 6.3
+  },
+  {
+   "t": 38.5,
+   "forca": 6.1
+  },
+  {
+   "t": 57.73,
+   "forca": 6.5
+  },
+  {
+   "t": 60.0,
+   "forca": 323.5
+  }
+ ],
+ "ambientes": [
+  {
+   "t": 0.0,
+   "musica": 0.34,
+   "descricao": [
+    [
+     "tom puro / bipe",
+     0.28
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "musica": 0.8,
+   "descricao": [
+    [
+     "guitarra/violão",
+     0.1
+    ]
+   ]
+  },
+  {
+   "t": 6.0,
+   "musica": 0.8,
+   "descricao": [
+    [
+     "guitarra/violão",
+     0.19
+    ],
+    [
+     "Plucked string instrument",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 9.0,
+   "musica": 0.8,
+   "descricao": [
+    [
+     "guitarra/violão",
+     0.18
+    ],
+    [
+     "Plucked string instrument",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 12.0,
+   "musica": 0.77,
+   "descricao": [
+    [
+     "Tabla",
+     0.17
+    ]
+   ]
+  },
+  {
+   "t": 15.0,
+   "musica": 0.88,
+   "descricao": [
+    [
+     "Sitar",
+     0.23
+    ],
+    [
+     "Plucked string instrument",
+     0.19
+    ],
+    [
+     "guitarra/violão",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 18.0,
+   "musica": 0.88,
+   "descricao": [
+    [
+     "guitarra/violão",
+     0.34
+    ],
+    [
+     "efeito de áudio",
+     0.26
+    ],
+    [
+     "Plucked string instrument",
+     0.23
+    ]
+   ]
+  },
+  {
+   "t": 21.0,
+   "musica": 0.74,
+   "descricao": [
+    [
+     "vidro",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 24.0,
+   "musica": 0.76,
+   "descricao": []
+  },
+  {
+   "t": 27.0,
+   "musica": 0.84,
+   "descricao": [
+    [
+     "música ambiente",
+     0.16
+    ]
+   ]
+  },
+  {
+   "t": 30.0,
+   "musica": 0.85,
+   "descricao": [
+    [
+     "música ambiente",
+     0.24
+    ],
+    [
+     "New-age music",
+     0.11
+    ],
+    [
+     "guitarra/violão",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 33.0,
+   "musica": 0.78,
+   "descricao": [
+    [
+     "guitarra/violão",
+     0.15
+    ],
+    [
+     "Plucked string instrument",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 36.0,
+   "musica": 0.69,
+   "descricao": []
+  },
+  {
+   "t": 39.0,
+   "musica": 0.82,
+   "descricao": [
+    [
+     "música ambiente",
+     0.14
+    ],
+    [
+     "música eletrônica",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 42.0,
+   "musica": 0.7,
+   "descricao": [
+    [
+     "Electronic organ",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 45.0,
+   "musica": 0.81,
+   "descricao": [
+    [
+     "música ambiente",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 48.0,
+   "musica": 0.84,
+   "descricao": [
+    [
+     "guitarra/violão",
+     0.15
+    ],
+    [
+     "Plucked string instrument",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 51.0,
+   "musica": 0.81,
+   "descricao": [
+    [
+     "guitarra/violão",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 54.0,
+   "musica": 0.82,
+   "descricao": [
+    [
+     "música ambiente",
+     0.13
+    ],
+    [
+     "New-age music",
+     0.13
+    ],
+    [
+     "Singing bowl",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 57.0,
+   "musica": 0.72,
+   "descricao": []
+  },
+  {
+   "t": 60.0,
+   "musica": 0.77,
+   "descricao": []
+  },
+  {
+   "t": 63.0,
+   "musica": 0.8,
+   "descricao": [
+    [
+     "New-age music",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 66.0,
+   "musica": 0.74,
+   "descricao": [
+    [
+     "Electronic organ",
+     0.11
+    ],
+    [
+     "Organ",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 69.0,
+   "musica": 0.84,
+   "descricao": []
+  }
+ ],
+ "cortes": [
+  {
+   "t": 1.79,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 3.79,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 5.62,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 6.62,
+   "na_batida": false,
+   "no_golpe": true,
+   "efeito": null
+  },
+  {
+   "t": 8.79,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 11.79,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 13.88,
+   "na_batida": false,
+   "no_golpe": true,
+   "efeito": null
+  },
+  {
+   "t": 15.08,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 20.75,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 22.58,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 25.54,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 28.0,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 33.33,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 39.54,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 41.96,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 45.0,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 47.17,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 63.92,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  }
+ ]
+}

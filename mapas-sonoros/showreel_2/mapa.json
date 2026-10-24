@@ -1,0 +1,684 @@
+{
+ "arquivo": "r2.mp4",
+ "duracao_s": 45.56,
+ "medidas": {
+  "lufs": -14.6,
+  "pico_dbtp": -0.6,
+  "piso_ruido_db": -32.9,
+  "relacao_sinal_ruido_db": 19.2,
+  "chiado_s_pct": 15.3,
+  "zumbido": null
+ },
+ "mixagem": {
+  "voz_sobre_fundo_db": 8.7,
+  "ducking_db": -0.3
+ },
+ "musica": {
+  "bpm": 110.0,
+  "batida_s": 0.546,
+  "eventos": [
+   {
+    "t": 2.0,
+    "tipo": "queda",
+    "db": -12.4
+   },
+   {
+    "t": 22.5,
+    "tipo": "queda",
+    "db": -8.3
+   },
+   {
+    "t": 31.0,
+    "tipo": "queda",
+    "db": -9.2
+   },
+   {
+    "t": 34.0,
+    "tipo": "queda",
+    "db": -24.0
+   },
+   {
+    "t": 36.5,
+    "tipo": "subida",
+    "db": 9.8
+   },
+   {
+    "t": 41.5,
+    "tipo": "subida",
+    "db": 10.6
+   }
+  ],
+  "energia_db_meio_segundo": [
+   14.2,
+   -36.8,
+   -27.7,
+   -31.6,
+   -32.9,
+   -32.0,
+   -31.0,
+   -37.2,
+   -38.3,
+   -34.8,
+   -38.2,
+   -37.1,
+   -38.4,
+   -35.3,
+   -40.5,
+   -32.5,
+   -32.2,
+   -32.5,
+   -29.6,
+   -34.0,
+   -31.0,
+   -29.6,
+   -25.9,
+   -26.7,
+   -22.8,
+   -24.5,
+   -18.3,
+   -19.1,
+   -21.1,
+   -24.3,
+   -28.5,
+   -29.9,
+   -29.9,
+   -28.4,
+   -32.8,
+   -29.2,
+   -35.4,
+   -28.1,
+   -32.6,
+   -31.2,
+   -28.9,
+   -30.1,
+   -25.6,
+   -21.4,
+   -27.4,
+   -34.5,
+   -26.2,
+   -28.0,
+   -28.0,
+   -31.0,
+   -28.9,
+   -28.0,
+   -30.0,
+   -32.0,
+   -32.8,
+   -24.6,
+   -22.1,
+   -21.5,
+   -26.5,
+   -21.8,
+   -23.8,
+   -27.7,
+   -34.1,
+   -30.9,
+   -25.5,
+   -16.6,
+   -16.2,
+   -23.8,
+   -44.5,
+   -36.1,
+   -40.7,
+   -26.8,
+   -33.4,
+   -24.4,
+   -22.5,
+   -37.4,
+   -38.5,
+   -33.3,
+   -35.2,
+   -40.7,
+   -29.8,
+   -35.5,
+   -29.5,
+   -23.3,
+   -26.8,
+   -32.5,
+   -35.1,
+   -35.1,
+   -37.5,
+   -31.9,
+   -29.0
+  ]
+ },
+ "fala": {
+  "trechos": [
+   [
+    0.17,
+    4.52
+   ],
+   [
+    5.45,
+    7.56
+   ],
+   [
+    8.27,
+    9.13
+   ],
+   [
+    9.71,
+    11.05
+   ],
+   [
+    11.47,
+    12.74
+   ],
+   [
+    13.55,
+    14.73
+   ],
+   [
+    15.34,
+    16.77
+   ],
+   [
+    17.03,
+    20.04
+   ],
+   [
+    21.1,
+    22.41
+   ],
+   [
+    22.83,
+    23.94
+   ],
+   [
+    24.68,
+    25.57
+   ],
+   [
+    26.25,
+    28.1
+   ],
+   [
+    28.68,
+    29.64
+   ],
+   [
+    30.86,
+    31.97
+   ],
+   [
+    32.39,
+    34.12
+   ],
+   [
+    34.92,
+    37.38
+   ],
+   [
+    39.08,
+    41.67
+   ],
+   [
+    41.99,
+    44.87
+   ]
+  ],
+  "percentual": 71.2,
+  "transcricao": [
+   {
+    "inicio": 0.17,
+    "fim": 4.52,
+    "texto": "Are you looking for a video editor who can take your project from idea to final frame?"
+   },
+   {
+    "inicio": 5.45,
+    "fim": 7.56,
+    "texto": "turning raw footage into a clear story."
+   },
+   {
+    "inicio": 8.27,
+    "fim": 12.74,
+    "texto": "Keeping the rhythm. No boring moments. No wasted seconds."
+   },
+   {
+    "inicio": 13.55,
+    "fim": 14.73,
+    "texto": "Smart use of AI."
+   },
+   {
+    "inicio": 15.34,
+    "fim": 20.04,
+    "texto": "not to replace creativity, but to enhance speed, precision, and possibilities."
+   },
+   {
+    "inicio": 21.1,
+    "fim": 23.94,
+    "texto": "Seamless transitions. Clean color grading."
+   },
+   {
+    "inicio": 24.68,
+    "fim": 25.57,
+    "texto": "Stabilization."
+   },
+   {
+    "inicio": 26.25,
+    "fim": 29.64,
+    "texto": "Motion graphics that serve the story, not distract from it."
+   },
+   {
+    "inicio": 30.86,
+    "fim": 34.12,
+    "texto": "And most importantly, knowing when to slow down."
+   },
+   {
+    "inicio": 34.92,
+    "fim": 37.38,
+    "texto": "and when to let the moment speak for itself."
+   },
+   {
+    "inicio": 39.08,
+    "fim": 44.87,
+    "texto": "Because great editing isn't just about effects. It's about feeling the video till the very last frame."
+   }
+  ]
+ },
+ "efeitos": [
+  {
+   "t": 13.15,
+   "forca": 5.4,
+   "sons": [
+    [
+     "pulsação grave",
+     "Throbbing",
+     0.42
+    ],
+    [
+     "zumbido",
+     "Hum",
+     0.23
+    ],
+    [
+     "batimento cardíaco",
+     "Heart sounds, heartbeat",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 14.11,
+   "forca": 4.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.2
+    ],
+    [
+     "ronco grave",
+     "Rumble",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 20.7,
+   "forca": 10.8,
+   "sons": [
+    [
+     "veículo (num corte, costuma ser whoosh)",
+     "Vehicle",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 27.55,
+   "forca": 4.4,
+   "sons": [
+    [
+     "veículo (num corte, costuma ser whoosh)",
+     "Vehicle",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 29.41,
+   "forca": 7.9,
+   "sons": [
+    [
+     "pulsação grave",
+     "Throbbing",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 42.21,
+   "forca": 4.7,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.17
+    ],
+    [
+     "batimento cardíaco",
+     "Heart sounds, heartbeat",
+     0.12
+    ]
+   ]
+  }
+ ],
+ "golpes_musica": [
+  {
+   "t": 4.48,
+   "forca": 7.0
+  },
+  {
+   "t": 5.02,
+   "forca": 8.8
+  },
+  {
+   "t": 7.74,
+   "forca": 10.5
+  },
+  {
+   "t": 9.09,
+   "forca": 10.8
+  },
+  {
+   "t": 9.38,
+   "forca": 10.3
+  },
+  {
+   "t": 11.3,
+   "forca": 6.0
+  },
+  {
+   "t": 11.97,
+   "forca": 7.1
+  },
+  {
+   "t": 14.82,
+   "forca": 7.2
+  },
+  {
+   "t": 15.26,
+   "forca": 7.0
+  },
+  {
+   "t": 16.32,
+   "forca": 11.6
+  },
+  {
+   "t": 18.11,
+   "forca": 8.5
+  },
+  {
+   "t": 19.74,
+   "forca": 7.0
+  },
+  {
+   "t": 23.46,
+   "forca": 6.2
+  },
+  {
+   "t": 35.62,
+   "forca": 8.3
+  },
+  {
+   "t": 41.12,
+   "forca": 6.1
+  }
+ ],
+ "ambientes": [
+  {
+   "t": 0.0,
+   "musica": 0.57,
+   "descricao": []
+  },
+  {
+   "t": 3.0,
+   "musica": 0.67,
+   "descricao": []
+  },
+  {
+   "t": 6.0,
+   "musica": 0.53,
+   "descricao": []
+  },
+  {
+   "t": 9.0,
+   "musica": 0.62,
+   "descricao": [
+    [
+     "pulsação grave",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 12.0,
+   "musica": 0.59,
+   "descricao": []
+  },
+  {
+   "t": 15.0,
+   "musica": 0.62,
+   "descricao": []
+  },
+  {
+   "t": 18.0,
+   "musica": 0.75,
+   "descricao": []
+  },
+  {
+   "t": 21.0,
+   "musica": 0.76,
+   "descricao": []
+  },
+  {
+   "t": 24.0,
+   "musica": 0.69,
+   "descricao": []
+  },
+  {
+   "t": 27.0,
+   "musica": 0.47,
+   "descricao": [
+    [
+     "quebra / crash",
+     0.19
+    ]
+   ]
+  },
+  {
+   "t": 30.0,
+   "musica": 0.61,
+   "descricao": [
+    [
+     "pancada",
+     0.1
+    ]
+   ]
+  },
+  {
+   "t": 33.0,
+   "musica": 0.61,
+   "descricao": [
+    [
+     "música eletrônica",
+     0.3
+    ],
+    [
+     "tom de linha",
+     0.2
+    ]
+   ]
+  },
+  {
+   "t": 36.0,
+   "musica": 0,
+   "descricao": [
+    [
+     "grilo",
+     0.42
+    ],
+    [
+     "inseto",
+     0.28
+    ],
+    [
+     "pássaro",
+     0.19
+    ]
+   ]
+  },
+  {
+   "t": 39.0,
+   "musica": 0.81,
+   "descricao": [
+    [
+     "tambor",
+     0.2
+    ],
+    [
+     "bumbo",
+     0.12
+    ],
+    [
+     "bateria",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 42.0,
+   "musica": 0.61,
+   "descricao": []
+  }
+ ],
+ "cortes": [
+  {
+   "t": 1.71,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 11.92,
+   "na_batida": true,
+   "no_golpe": true,
+   "efeito": null
+  },
+  {
+   "t": 13.08,
+   "na_batida": true,
+   "no_golpe": false,
+   "efeito": "pulsação grave"
+  },
+  {
+   "t": 14.88,
+   "na_batida": false,
+   "no_golpe": true,
+   "efeito": null
+  },
+  {
+   "t": 15.62,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 19.21,
+   "na_batida": true,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 20.0,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 25.83,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 29.96,
+   "na_batida": true,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 31.42,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 31.83,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 32.25,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 32.71,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 33.17,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 35.17,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 36.04,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 38.67,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 39.04,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 39.5,
+   "na_batida": true,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 40.21,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 42.21,
+   "na_batida": true,
+   "no_golpe": false,
+   "efeito": "Heart murmur"
+  }
+ ]
+}

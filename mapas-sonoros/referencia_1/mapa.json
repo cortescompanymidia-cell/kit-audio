@@ -1,0 +1,1495 @@
+{
+ "arquivo": "v1.mp4",
+ "duracao_s": 104.88,
+ "medidas": {
+  "lufs": -24.1,
+  "pico_dbtp": -1.6,
+  "piso_ruido_db": -44.3,
+  "relacao_sinal_ruido_db": 21.1,
+  "chiado_s_pct": 24.7,
+  "zumbido": null
+ },
+ "mixagem": {
+  "voz_sobre_fundo_db": 0.2,
+  "ducking_db": null
+ },
+ "musica": {
+  "bpm": 120.2,
+  "batida_s": 0.499,
+  "eventos": [
+   {
+    "t": 17.0,
+    "tipo": "subida",
+    "db": 9.7
+   },
+   {
+    "t": 30.5,
+    "tipo": "subida",
+    "db": 11.5
+   },
+   {
+    "t": 59.5,
+    "tipo": "subida",
+    "db": 67.1
+   },
+   {
+    "t": 62.0,
+    "tipo": "queda",
+    "db": -12.4
+   },
+   {
+    "t": 86.5,
+    "tipo": "queda",
+    "db": -8.2
+   },
+   {
+    "t": 98.0,
+    "tipo": "subida",
+    "db": 8.1
+   }
+  ],
+  "energia_db_meio_segundo": [
+   -30.2,
+   -58.0,
+   -57.1,
+   -50.1,
+   -49.2,
+   -49.0,
+   -57.9,
+   -51.2,
+   -50.3,
+   -49.3,
+   -47.5,
+   -53.7,
+   -49.5,
+   -49.2,
+   -50.4,
+   -52.7,
+   -56.3,
+   -51.7,
+   -46.6,
+   -50.0,
+   -49.3,
+   -51.6,
+   -56.3,
+   -50.9,
+   -48.8,
+   -50.0,
+   -47.1,
+   -51.6,
+   -50.8,
+   -49.3,
+   -48.8,
+   -48.2,
+   -50.8,
+   -50.6,
+   -39.9,
+   -41.5,
+   -50.3,
+   -48.7,
+   -56.4,
+   -50.5,
+   -48.4,
+   -49.6,
+   -48.4,
+   -53.5,
+   -54.2,
+   -55.1,
+   -55.2,
+   -49.7,
+   -52.0,
+   -53.6,
+   -53.2,
+   -47.5,
+   -49.1,
+   -43.4,
+   -50.8,
+   -54.5,
+   -53.5,
+   -57.6,
+   -56.5,
+   -51.9,
+   -52.3,
+   -43.1,
+   -52.3,
+   -47.9,
+   -50.5,
+   -54.4,
+   -52.5,
+   -51.6,
+   -48.5,
+   -49.8,
+   -56.2,
+   -50.7,
+   -49.0,
+   -49.2,
+   -47.6,
+   -50.4,
+   -48.7,
+   -50.0,
+   -50.7,
+   -48.4,
+   -50.1,
+   -52.0,
+   -52.9,
+   -50.6,
+   -48.5,
+   -49.0,
+   -57.0,
+   -51.3,
+   -50.2,
+   -50.0,
+   -48.7,
+   -53.2,
+   -49.9,
+   -48.8,
+   -50.1,
+   -46.2,
+   -49.8,
+   -51.7,
+   -51.7,
+   -49.3,
+   -48.6,
+   -48.1,
+   -54.3,
+   -48.6,
+   -48.2,
+   -49.5,
+   -49.0,
+   -53.6,
+   -51.5,
+   -52.1,
+   -52.5,
+   -48.5,
+   -51.8,
+   -53.7,
+   -51.6,
+   -52.5,
+   -50.2,
+   -48.6,
+   -58.0,
+   14.8,
+   -33.0,
+   -38.2,
+   -42.8,
+   -49.1,
+   -53.2,
+   -51.8,
+   -51.8,
+   -48.3,
+   -51.9,
+   -47.3,
+   -43.1,
+   -47.5,
+   -46.7,
+   -46.3,
+   -41.9,
+   -47.5,
+   -50.2,
+   -48.6,
+   -41.1,
+   -52.1,
+   -51.0,
+   -50.5,
+   -48.6,
+   -48.0,
+   -53.7,
+   -52.3,
+   -56.2,
+   -52.2,
+   -49.4,
+   -49.0,
+   -48.0,
+   -50.4,
+   -49.5,
+   -48.1,
+   -49.3,
+   -48.1,
+   -48.3,
+   -52.7,
+   -43.5,
+   -49.8,
+   -50.6,
+   -48.1,
+   -52.0,
+   -47.4,
+   -48.9,
+   -52.5,
+   -49.0,
+   -52.7,
+   -50.7,
+   -51.7,
+   -49.4,
+   -48.4,
+   -48.5,
+   -57.6,
+   -50.6,
+   -49.7,
+   -51.1,
+   -47.3,
+   -50.9,
+   -50.6,
+   -49.6,
+   -49.7,
+   -47.7,
+   -50.4,
+   -55.1,
+   -53.4,
+   -50.1,
+   -49.1,
+   -48.3,
+   -53.9,
+   -48.8,
+   -49.2,
+   -50.3,
+   -46.6,
+   -51.2,
+   -49.9,
+   -41.4,
+   -47.6,
+   -42.5,
+   -49.8,
+   -51.3,
+   -50.8,
+   -48.0,
+   -49.2,
+   -49.4,
+   -54.8,
+   -49.5,
+   -50.7,
+   -47.6
+  ]
+ },
+ "fala": {
+  "trechos": [
+   [
+    0.36,
+    1.64
+   ],
+   [
+    1.9,
+    13.22
+   ],
+   [
+    13.64,
+    15.27
+   ],
+   [
+    15.56,
+    17.48
+   ],
+   [
+    17.83,
+    30.69
+   ],
+   [
+    31.05,
+    37.51
+   ],
+   [
+    37.9,
+    46.41
+   ],
+   [
+    46.67,
+    48.97
+   ],
+   [
+    49.29,
+    52.07
+   ],
+   [
+    52.36,
+    57.16
+   ],
+   [
+    57.42,
+    64.74
+   ],
+   [
+    65.13,
+    65.67
+   ],
+   [
+    65.9,
+    78.89
+   ],
+   [
+    79.24,
+    81.61
+   ],
+   [
+    81.83,
+    89.22
+   ],
+   [
+    89.48,
+    91.69
+   ],
+   [
+    91.98,
+    94.85
+   ],
+   [
+    95.18,
+    100.77
+   ],
+   [
+    101.0,
+    104.83
+   ]
+  ],
+  "percentual": 94.3,
+  "transcricao": [
+   {
+    "inicio": 0.36,
+    "fim": 17.48,
+    "texto": "O presidente da República ocupa o cargo mais alto da esfera federal do executivo. E apesar dele não ter o poder de um monarca absolutista, existem algumas coisas que ele consegue sim fazer absolutamente sozinho. E dessas coisas, seis vale menção aqui. O presidente consegue..."
+   },
+   {
+    "inicio": 17.83,
+    "fim": 37.51,
+    "texto": "Criar e dissolver ministérios, inclusive nomeando e demitindo ministros. Então hoje são 37 ministérios e caso o presidente deseja fazer qualquer alteração em estrutura ou pessoas, é um parágrafo no Diário Oficial da União e tá feito. Segundo, ele pode criar medidas provisórias, conhecidas como MPs, que são nada mais do que medidas com força de lei..."
+   },
+   {
+    "inicio": 37.9,
+    "fim": 57.16,
+    "texto": "imediata. Daí o Congresso precisa avaliar a MP em até 120 dias e se o Congresso não votar contra ou não votar a favor até o fim desse prazo, a MP morre e tudo que ela mudou volta atrás. Terceiro, vetar leis. Então, se o Congresso aprovar um projeto de lei que o presidente considera inconstitucional ou..."
+   },
+   {
+    "inicio": 57.42,
+    "fim": 81.61,
+    "texto": "Contrário ao interesse público, o presidente pode vetar. Nesse caso, o Congresso também pode, depois do veto do presidente, vetar o veto do presidente, caso haja a maioria absoluta dos votos dentro do Congresso. Quarto, o presidente também pode realizar indultos, o que basicamente significa o poder de conceder perdão oficial ou reduzir pena às pessoas que já foram condenadas pela justiça. Isso..."
+   },
+   {
+    "inicio": 81.83,
+    "fim": 104.83,
+    "texto": "sem passar por qualquer juiz ou pelo Congresso. Outra é a gestão da política externa, ou seja, reconhecer governo estrangeiro, romper relações, nomear representantes diplomáticos em outros países, promover conversas sobre tratados e acordos comerciais. E, sexto e por fim, o Comando Supremo das Forças Armadas. O presidente tem autonomia total para trocar os comandantes das Forças Armadas a qualquer momento."
+   }
+  ]
+ },
+ "efeitos": [
+  {
+   "t": 0.16,
+   "forca": 8.3,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.27
+    ]
+   ]
+  },
+  {
+   "t": 1.22,
+   "forca": 4.2,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.24
+    ]
+   ]
+  },
+  {
+   "t": 1.86,
+   "forca": 11.9,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 2.3,
+   "forca": 5.2,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 3.55,
+   "forca": 4.1,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.19
+    ],
+    [
+     "tom puro / bipe",
+     "Sine wave",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 4.22,
+   "forca": 4.1,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.29
+    ]
+   ]
+  },
+  {
+   "t": 6.18,
+   "forca": 7.1,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.21
+    ]
+   ]
+  },
+  {
+   "t": 7.36,
+   "forca": 4.5,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.4
+    ]
+   ]
+  },
+  {
+   "t": 7.68,
+   "forca": 5.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.22
+    ]
+   ]
+  },
+  {
+   "t": 8.86,
+   "forca": 5.2,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.26
+    ]
+   ]
+  },
+  {
+   "t": 11.97,
+   "forca": 14.2,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 13.22,
+   "forca": 4.2,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.2
+    ]
+   ]
+  },
+  {
+   "t": 13.54,
+   "forca": 7.5,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.23
+    ]
+   ]
+  },
+  {
+   "t": 14.18,
+   "forca": 4.9,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.25
+    ]
+   ]
+  },
+  {
+   "t": 17.41,
+   "forca": 26.7,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.29
+    ]
+   ]
+  },
+  {
+   "t": 18.56,
+   "forca": 5.7,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.23
+    ]
+   ]
+  },
+  {
+   "t": 19.46,
+   "forca": 5.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.19
+    ]
+   ]
+  },
+  {
+   "t": 20.42,
+   "forca": 5.3,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.28
+    ]
+   ]
+  },
+  {
+   "t": 21.18,
+   "forca": 7.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.3
+    ]
+   ]
+  },
+  {
+   "t": 25.15,
+   "forca": 7.3,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 25.92,
+   "forca": 5.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.33
+    ]
+   ]
+  },
+  {
+   "t": 27.55,
+   "forca": 7.6,
+   "sons": [
+    [
+     "Scissors",
+     "Scissors",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 28.35,
+   "forca": 9.2,
+   "sons": [
+    [
+     "tique",
+     "Tick",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 30.88,
+   "forca": 75.5,
+   "sons": [
+    [
+     "tique",
+     "Tick",
+     0.18
+    ],
+    [
+     "tique-taque",
+     "Tick-tock",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 35.74,
+   "forca": 14.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.42
+    ]
+   ]
+  },
+  {
+   "t": 37.02,
+   "forca": 4.4,
+   "sons": [
+    [
+     "tom puro / bipe",
+     "Sine wave",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 40.29,
+   "forca": 5.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 46.88,
+   "forca": 9.5,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 60.35,
+   "forca": 69.7,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.47
+    ],
+    [
+     "batimento cardíaco",
+     "Heart sounds, heartbeat",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 61.22,
+   "forca": 4.9,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.16
+    ]
+   ]
+  },
+  {
+   "t": 65.12,
+   "forca": 15.6,
+   "sons": [
+    [
+     "tique",
+     "Tick",
+     0.17
+    ],
+    [
+     "tique-taque",
+     "Tick-tock",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 65.76,
+   "forca": 23.5,
+   "sons": [
+    [
+     "Scissors",
+     "Scissors",
+     0.17
+    ]
+   ]
+  },
+  {
+   "t": 67.01,
+   "forca": 5.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 67.46,
+   "forca": 11.4,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.44
+    ]
+   ]
+  },
+  {
+   "t": 69.28,
+   "forca": 29.1,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.16
+    ]
+   ]
+  },
+  {
+   "t": 71.04,
+   "forca": 5.3,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 71.33,
+   "forca": 11.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.2
+    ]
+   ]
+  },
+  {
+   "t": 71.65,
+   "forca": 7.1,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.18
+    ]
+   ]
+  },
+  {
+   "t": 71.97,
+   "forca": 10.3,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 74.05,
+   "forca": 7.4,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 81.06,
+   "forca": 4.8,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 81.54,
+   "forca": 19.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.18
+    ]
+   ]
+  },
+  {
+   "t": 84.38,
+   "forca": 4.9,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.19
+    ]
+   ]
+  },
+  {
+   "t": 85.38,
+   "forca": 4.1,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.24
+    ]
+   ]
+  },
+  {
+   "t": 85.73,
+   "forca": 4.0,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.22
+    ]
+   ]
+  },
+  {
+   "t": 91.68,
+   "forca": 4.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 94.18,
+   "forca": 4.4,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 96.51,
+   "forca": 5.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.27
+    ]
+   ]
+  },
+  {
+   "t": 99.04,
+   "forca": 12.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.23
+    ]
+   ]
+  },
+  {
+   "t": 99.52,
+   "forca": 5.2,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.16
+    ]
+   ]
+  }
+ ],
+ "golpes_musica": [
+  {
+   "t": 14.85,
+   "forca": 11.5
+  },
+  {
+   "t": 15.36,
+   "forca": 9.8
+  },
+  {
+   "t": 23.87,
+   "forca": 16.9
+  },
+  {
+   "t": 26.88,
+   "forca": 10.5
+  },
+  {
+   "t": 29.5,
+   "forca": 6.8
+  },
+  {
+   "t": 37.73,
+   "forca": 7.8
+  },
+  {
+   "t": 38.18,
+   "forca": 14.8
+  },
+  {
+   "t": 47.36,
+   "forca": 6.4
+  },
+  {
+   "t": 47.87,
+   "forca": 6.6
+  },
+  {
+   "t": 50.02,
+   "forca": 9.0
+  },
+  {
+   "t": 51.9,
+   "forca": 6.2
+  },
+  {
+   "t": 52.19,
+   "forca": 9.1
+  },
+  {
+   "t": 55.49,
+   "forca": 6.9
+  },
+  {
+   "t": 57.15,
+   "forca": 7.6
+  },
+  {
+   "t": 60.0,
+   "forca": 1045.4
+  },
+  {
+   "t": 64.83,
+   "forca": 35.8
+  },
+  {
+   "t": 74.69,
+   "forca": 10.2
+  },
+  {
+   "t": 75.01,
+   "forca": 6.9
+  },
+  {
+   "t": 79.01,
+   "forca": 19.3
+  },
+  {
+   "t": 79.3,
+   "forca": 22.1
+  },
+  {
+   "t": 87.71,
+   "forca": 6.6
+  },
+  {
+   "t": 88.93,
+   "forca": 7.0
+  },
+  {
+   "t": 89.7,
+   "forca": 7.0
+  },
+  {
+   "t": 90.5,
+   "forca": 10.3
+  },
+  {
+   "t": 90.85,
+   "forca": 11.1
+  },
+  {
+   "t": 93.54,
+   "forca": 7.0
+  },
+  {
+   "t": 95.01,
+   "forca": 14.3
+  },
+  {
+   "t": 95.68,
+   "forca": 12.3
+  },
+  {
+   "t": 97.15,
+   "forca": 7.0
+  },
+  {
+   "t": 98.02,
+   "forca": 12.0
+  },
+  {
+   "t": 100.35,
+   "forca": 7.2
+  },
+  {
+   "t": 100.7,
+   "forca": 6.1
+  },
+  {
+   "t": 101.02,
+   "forca": 11.9
+  },
+  {
+   "t": 103.04,
+   "forca": 9.7
+  },
+  {
+   "t": 104.03,
+   "forca": 7.6
+  }
+ ],
+ "ambientes": [
+  {
+   "t": 0.0,
+   "musica": 0,
+   "descricao": [
+    [
+     "tom puro / bipe",
+     0.5
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "musica": 0.37,
+   "descricao": [
+    [
+     "sonar",
+     0.34
+    ],
+    [
+     "Singing bowl",
+     0.17
+    ]
+   ]
+  },
+  {
+   "t": 6.0,
+   "musica": 0.38,
+   "descricao": [
+    [
+     "sonar",
+     0.29
+    ],
+    [
+     "Singing bowl",
+     0.17
+    ]
+   ]
+  },
+  {
+   "t": 9.0,
+   "musica": 0.39,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.26
+    ],
+    [
+     "sonar",
+     0.24
+    ]
+   ]
+  },
+  {
+   "t": 12.0,
+   "musica": 0.33,
+   "descricao": [
+    [
+     "sonar",
+     0.25
+    ],
+    [
+     "Singing bowl",
+     0.23
+    ]
+   ]
+  },
+  {
+   "t": 15.0,
+   "musica": 0,
+   "descricao": [
+    [
+     "whoosh (passagem de ar)",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 18.0,
+   "musica": 0.54,
+   "descricao": [
+    [
+     "sonar",
+     0.17
+    ],
+    [
+     "Singing bowl",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 21.0,
+   "musica": 0.21,
+   "descricao": []
+  },
+  {
+   "t": 24.0,
+   "musica": 0.41,
+   "descricao": [
+    [
+     "sonar",
+     0.18
+    ],
+    [
+     "Singing bowl",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 27.0,
+   "musica": 0.35,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.29
+    ]
+   ]
+  },
+  {
+   "t": 30.0,
+   "musica": 0.11,
+   "descricao": [
+    [
+     "Plop",
+     0.2
+    ]
+   ]
+  },
+  {
+   "t": 33.0,
+   "musica": 0.21,
+   "descricao": [
+    [
+     "sonar",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 36.0,
+   "musica": 0.26,
+   "descricao": []
+  },
+  {
+   "t": 39.0,
+   "musica": 0.25,
+   "descricao": []
+  },
+  {
+   "t": 42.0,
+   "musica": 0.36,
+   "descricao": []
+  },
+  {
+   "t": 45.0,
+   "musica": 0.39,
+   "descricao": []
+  },
+  {
+   "t": 48.0,
+   "musica": 0.28,
+   "descricao": []
+  },
+  {
+   "t": 51.0,
+   "musica": 0.2,
+   "descricao": [
+    [
+     "Patter",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 54.0,
+   "musica": 0.37,
+   "descricao": []
+  },
+  {
+   "t": 57.0,
+   "musica": 0.23,
+   "descricao": []
+  },
+  {
+   "t": 60.0,
+   "musica": 0,
+   "descricao": [
+    [
+     "Oink",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 63.0,
+   "musica": 0.54,
+   "descricao": [
+    [
+     "Scissors",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 66.0,
+   "musica": 0.23,
+   "descricao": []
+  },
+  {
+   "t": 69.0,
+   "musica": 0.39,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.1
+    ],
+    [
+     "sonar",
+     0.1
+    ]
+   ]
+  },
+  {
+   "t": 72.0,
+   "musica": 0.46,
+   "descricao": [
+    [
+     "sonar",
+     0.19
+    ]
+   ]
+  },
+  {
+   "t": 75.0,
+   "musica": 0.22,
+   "descricao": []
+  },
+  {
+   "t": 78.0,
+   "musica": 0.47,
+   "descricao": []
+  },
+  {
+   "t": 81.0,
+   "musica": 0.55,
+   "descricao": []
+  },
+  {
+   "t": 84.0,
+   "musica": 0.45,
+   "descricao": [
+    [
+     "sonar",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 87.0,
+   "musica": 0.2,
+   "descricao": []
+  },
+  {
+   "t": 90.0,
+   "musica": 0.24,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.15
+    ],
+    [
+     "sonar",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 93.0,
+   "musica": 0.51,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 96.0,
+   "musica": 0.42,
+   "descricao": [
+    [
+     "sonar",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 99.0,
+   "musica": 0.55,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.15
+    ],
+    [
+     "sonar",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 102.0,
+   "musica": 0.31,
+   "descricao": []
+  }
+ ],
+ "cortes": [
+  {
+   "t": 5.67,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 7.26,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": "sonar"
+  },
+  {
+   "t": 10.39,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 16.52,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 22.98,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 28.07,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 31.41,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 39.75,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 49.88,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 55.47,
+   "na_batida": false,
+   "no_golpe": true,
+   "efeito": null
+  },
+  {
+   "t": 67.23,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 81.54,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": "sonar"
+  },
+  {
+   "t": 84.42,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": "sonar"
+  },
+  {
+   "t": 89.26,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 96.68,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  }
+ ]
+}

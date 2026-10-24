@@ -1,0 +1,567 @@
+{
+ "arquivo": "r3.mp4",
+ "duracao_s": 30.12,
+ "medidas": {
+  "lufs": -14.4,
+  "pico_dbtp": -0.6,
+  "piso_ruido_db": -24.0,
+  "relacao_sinal_ruido_db": 11.0,
+  "chiado_s_pct": 14.0,
+  "zumbido": null
+ },
+ "mixagem": {
+  "voz_sobre_fundo_db": 2.4,
+  "ducking_db": 18.7
+ },
+ "musica": {
+  "bpm": 287.1,
+  "batida_s": 0.209,
+  "eventos": [
+   {
+    "t": 2.0,
+    "tipo": "queda",
+    "db": -11.1
+   },
+   {
+    "t": 9.0,
+    "tipo": "queda",
+    "db": -8.4
+   },
+   {
+    "t": 22.5,
+    "tipo": "subida",
+    "db": 10.8
+   },
+   {
+    "t": 25.0,
+    "tipo": "subida",
+    "db": 8.6
+   }
+  ],
+  "energia_db_meio_segundo": [
+   14.7,
+   -16.9,
+   -19.6,
+   -24.5,
+   -22.7,
+   -14.3,
+   -23.9,
+   -21.5,
+   -12.7,
+   -12.6,
+   -16.3,
+   -18.4,
+   -18.9,
+   -21.7,
+   -18.7,
+   -14.4,
+   -13.5,
+   -15.0,
+   -23.8,
+   -21.6,
+   -25.8,
+   -27.2,
+   -23.4,
+   -20.1,
+   -21.5,
+   -15.8,
+   -20.3,
+   -22.9,
+   -27.5,
+   -18.8,
+   -26.8,
+   -23.3,
+   -26.6,
+   -22.2,
+   -25.8,
+   -18.0,
+   -22.5,
+   -23.6,
+   -25.0,
+   -27.4,
+   -23.0,
+   -26.2,
+   -26.8,
+   -27.9,
+   -27.1,
+   -16.2,
+   -26.4,
+   -18.9,
+   -17.1,
+   -23.4,
+   -12.9,
+   -19.7,
+   -18.3,
+   -20.0,
+   -20.2,
+   -27.1,
+   -24.9,
+   -22.3,
+   -20.4,
+   -16.7
+  ]
+ },
+ "fala": {
+  "trechos": [
+   [
+    3.02,
+    4.49
+   ],
+   [
+    5.74,
+    8.1
+   ],
+   [
+    8.84,
+    24.61
+   ]
+  ],
+  "percentual": 65.1,
+  "transcricao": [
+   {
+    "inicio": 3.02,
+    "fim": 4.49,
+    "texto": "Editing is complicated."
+   },
+   {
+    "inicio": 5.74,
+    "fim": 8.1,
+    "texto": "But I'm here to save your day."
+   },
+   {
+    "inicio": 8.84,
+    "fim": 24.61,
+    "texto": "I've generated millions of views through my editing. No, tens of millions at this point. I'm a user of DaVinci Resolve, Premiere Pro, and Photoshop. In DaVinci, I do all my work from cutting, motion graphics, audio designing, and even 3D animations. And in Premiere, I can match that 90% of the work."
+   }
+  ]
+ },
+ "efeitos": [
+  {
+   "t": 0.45,
+   "forca": 7.9,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.2
+    ]
+   ]
+  },
+  {
+   "t": 2.46,
+   "forca": 9.6,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.39
+    ],
+    [
+     "batimento cardíaco",
+     "Heart sounds, heartbeat",
+     0.26
+    ]
+   ]
+  },
+  {
+   "t": 4.16,
+   "forca": 12.5,
+   "sons": [
+    [
+     "impacto grave (boom)",
+     "Boom",
+     0.31
+    ],
+    [
+     "ronco grave",
+     "Rumble",
+     0.19
+    ],
+    [
+     "whoosh (passagem de ar)",
+     "Whoosh, swoosh, swish",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 6.37,
+   "forca": 4.2,
+   "sons": [
+    [
+     "ronco grave",
+     "Rumble",
+     0.16
+    ]
+   ]
+  },
+  {
+   "t": 8.48,
+   "forca": 6.3,
+   "sons": [
+    [
+     "ronco grave",
+     "Rumble",
+     0.42
+    ]
+   ]
+  },
+  {
+   "t": 9.63,
+   "forca": 6.9,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.47
+    ]
+   ]
+  },
+  {
+   "t": 10.85,
+   "forca": 5.7,
+   "sons": [
+    [
+     "ronco grave",
+     "Rumble",
+     0.17
+    ]
+   ]
+  },
+  {
+   "t": 11.52,
+   "forca": 5.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.51
+    ]
+   ]
+  },
+  {
+   "t": 14.59,
+   "forca": 4.9,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.18
+    ]
+   ]
+  },
+  {
+   "t": 15.84,
+   "forca": 4.8,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.55
+    ]
+   ]
+  },
+  {
+   "t": 16.54,
+   "forca": 5.9,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.41
+    ]
+   ]
+  },
+  {
+   "t": 16.83,
+   "forca": 6.5,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.31
+    ],
+    [
+     "batimento cardíaco",
+     "Heart sounds, heartbeat",
+     0.17
+    ]
+   ]
+  },
+  {
+   "t": 18.56,
+   "forca": 12.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 19.46,
+   "forca": 6.4,
+   "sons": [
+    [
+     "ronco grave",
+     "Rumble",
+     0.26
+    ],
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.21
+    ],
+    [
+     "vidro",
+     "Glass",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 21.38,
+   "forca": 7.4,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.6
+    ]
+   ]
+  },
+  {
+   "t": 22.59,
+   "forca": 14.6,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.22
+    ],
+    [
+     "whoosh (passagem de ar)",
+     "Whoosh, swoosh, swish",
+     0.16
+    ],
+    [
+     "batimento cardíaco",
+     "Heart sounds, heartbeat",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 23.17,
+   "forca": 4.4,
+   "sons": [
+    [
+     "Heart murmur",
+     "Heart murmur",
+     0.62
+    ]
+   ]
+  },
+  {
+   "t": 25.15,
+   "forca": 12.6,
+   "sons": [
+    [
+     "pulsação grave",
+     "Throbbing",
+     0.21
+    ]
+   ]
+  },
+  {
+   "t": 25.7,
+   "forca": 9.0,
+   "sons": [
+    [
+     "ronco grave",
+     "Rumble",
+     0.24
+    ],
+    [
+     "veículo (num corte, costuma ser whoosh)",
+     "Vehicle",
+     0.17
+    ],
+    [
+     "Walk, footsteps",
+     "Walk, footsteps",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 26.27,
+   "forca": 5.2,
+   "sons": [
+    [
+     "ronco grave",
+     "Rumble",
+     0.37
+    ],
+    [
+     "veículo (num corte, costuma ser whoosh)",
+     "Vehicle",
+     0.19
+    ]
+   ]
+  }
+ ],
+ "golpes_musica": [
+  {
+   "t": 12.48,
+   "forca": 12.9
+  },
+  {
+   "t": 20.48,
+   "forca": 6.8
+  },
+  {
+   "t": 23.97,
+   "forca": 9.1
+  },
+  {
+   "t": 24.58,
+   "forca": 7.2
+  }
+ ],
+ "ambientes": [
+  {
+   "t": 0.0,
+   "musica": 0.37,
+   "descricao": [
+    [
+     "tom puro / bipe",
+     0.34
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "musica": 0,
+   "descricao": [
+    [
+     "explosão",
+     0.26
+    ],
+    [
+     "whoosh (passagem de ar)",
+     0.16
+    ]
+   ]
+  },
+  {
+   "t": 6.0,
+   "musica": 0.27,
+   "descricao": [
+    [
+     "ronco grave",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 9.0,
+   "musica": 0,
+   "descricao": []
+  },
+  {
+   "t": 12.0,
+   "musica": 0.23,
+   "descricao": []
+  },
+  {
+   "t": 15.0,
+   "musica": 0.25,
+   "descricao": [
+    [
+     "Heart murmur",
+     0.39
+    ],
+    [
+     "batimento cardíaco",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 18.0,
+   "musica": 0.33,
+   "descricao": [
+    [
+     "Whale vocalization",
+     0.18
+    ],
+    [
+     "vidro",
+     0.12
+    ],
+    [
+     "Scrape",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 21.0,
+   "musica": 0.26,
+   "descricao": [
+    [
+     "batimento cardíaco",
+     0.34
+    ],
+    [
+     "Heart murmur",
+     0.31
+    ]
+   ]
+  },
+  {
+   "t": 24.0,
+   "musica": 0.66,
+   "descricao": [
+    [
+     "música eletrônica",
+     0.2
+    ]
+   ]
+  },
+  {
+   "t": 27.0,
+   "musica": 0.55,
+   "descricao": [
+    [
+     "ronco grave",
+     0.3
+    ],
+    [
+     "sonar",
+     0.17
+    ],
+    [
+     "música eletrônica",
+     0.15
+    ]
+   ]
+  }
+ ],
+ "cortes": [
+  {
+   "t": 10.0,
+   "na_batida": true,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 25.0,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  }
+ ]
+}

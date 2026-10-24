@@ -1,0 +1,532 @@
+{
+ "arquivo": "v3.mp4",
+ "duracao_s": 60.3,
+ "medidas": {
+  "lufs": -17.0,
+  "pico_dbtp": -0.0,
+  "piso_ruido_db": -34.8,
+  "relacao_sinal_ruido_db": 19.5,
+  "chiado_s_pct": 7.1,
+  "zumbido": null
+ },
+ "mixagem": {
+  "voz_sobre_fundo_db": 3.3,
+  "ducking_db": null
+ },
+ "musica": {
+  "bpm": 120.2,
+  "batida_s": 0.499,
+  "eventos": [
+   {
+    "t": 59.5,
+    "tipo": "subida",
+    "db": 47.7
+   }
+  ],
+  "energia_db_meio_segundo": [
+   -16.6,
+   -42.9,
+   -42.7,
+   -44.2,
+   -43.8,
+   -44.8,
+   -41.6,
+   -41.8,
+   -45.1,
+   -44.0,
+   -42.8,
+   -44.4,
+   -45.6,
+   -41.1,
+   -40.4,
+   -42.4,
+   -44.0,
+   -44.6,
+   -42.0,
+   -43.3,
+   -42.2,
+   -40.5,
+   -44.4,
+   -43.4,
+   -41.2,
+   -37.7,
+   -37.8,
+   -38.0,
+   -40.4,
+   -40.4,
+   -41.5,
+   -41.6,
+   -40.9,
+   -40.7,
+   -42.5,
+   -41.5,
+   -41.1,
+   -41.0,
+   -43.6,
+   -42.0,
+   -41.9,
+   -42.9,
+   -41.6,
+   -40.5,
+   -40.2,
+   -40.3,
+   -42.7,
+   -41.0,
+   -45.9,
+   -42.7,
+   -43.1,
+   -41.1,
+   -42.9,
+   -41.8,
+   -42.2,
+   -44.2,
+   -41.8,
+   -40.9,
+   -41.5,
+   -37.8,
+   -38.1,
+   -37.5,
+   -40.1,
+   -42.5,
+   -42.2,
+   -43.4,
+   -41.9,
+   -41.7,
+   -42.3,
+   -40.8,
+   -42.6,
+   -41.9,
+   -42.4,
+   -40.7,
+   -39.9,
+   -41.2,
+   -40.8,
+   -43.8,
+   -41.6,
+   -41.0,
+   -43.4,
+   -43.2,
+   -42.6,
+   -40.7,
+   -39.9,
+   -41.6,
+   -40.5,
+   -45.3,
+   -43.7,
+   -45.5,
+   -47.8,
+   -44.2,
+   -45.9,
+   -44.0,
+   -46.7,
+   -42.7,
+   -44.4,
+   -42.3,
+   -42.4,
+   -42.1,
+   -46.2,
+   -44.0,
+   -42.0,
+   -40.6,
+   -41.6,
+   -42.5,
+   -41.9,
+   -42.1,
+   -43.7,
+   -43.4,
+   -42.9,
+   -45.7,
+   -42.7,
+   -41.4,
+   -42.8,
+   -45.3,
+   -41.5,
+   -41.3,
+   -45.6,
+   4.3
+  ]
+ },
+ "fala": {
+  "trechos": [
+   [
+    0.17,
+    28.51
+   ],
+   [
+    28.62,
+    53.63
+   ],
+   [
+    53.71,
+    60.26
+   ]
+  ],
+  "percentual": 99.3,
+  "transcricao": [
+   {
+    "inicio": 0.17,
+    "fim": 28.51,
+    "texto": "O trabalho desse artista marcou sua infância, mas você não sabe o nome dele. Artistas que todo filmmaker deveria conhecer, episódio 5, Hans Barrett. Hans é um dos artistas responsáveis por criar o visual de alguns dos maiores filmes de animação da Disney. Ele foi production designer em Mulan e trabalhou no visual de filmes como A Bela e a Fera, Aladdin e O Rei Leão. Ele queria verdadeiras pinturas e estudos com aquarela e tinta óleo que ajudam a definir os cenários antes mesmo da animação acontecer. Uma coisa muito interessante na maneira como ele trabalha, ele trata cada design como se fosse um..."
+   },
+   {
+    "inicio": 28.62,
+    "fim": 53.63,
+    "texto": "palco de teatro. Ou seja, ele não tá pensando apenas em criar um cenário bonito. Ele tá pensando onde os personagens vão estar e pra onde o olhar da audiência vai e como aquele espaço vai contar uma história. E olha como ele usa luz e silhueta e cores. Ele decide uma cor mais clara pra ilustrar o centale aqui e a silhueta do personagem no cavalo. E olha como as formas não são hiper detalhadas, mas ele consegue sugerir muito e expressar muito um pouco..."
+   },
+   {
+    "inicio": 53.71,
+    "fim": 60.26,
+    "texto": "poucos traços e isso é um mestre. Se você também quer aumentar o seu repertório visual, me segue aqui para mais referências como essa."
+   }
+  ]
+ },
+ "efeitos": [
+  {
+   "t": 7.07,
+   "forca": 4.5,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 46.66,
+   "forca": 4.6,
+   "sons": [
+    [
+     "sonar",
+     "Sonar",
+     0.22
+    ]
+   ]
+  }
+ ],
+ "golpes_musica": [
+  {
+   "t": 11.97,
+   "forca": 7.1
+  },
+  {
+   "t": 35.74,
+   "forca": 6.0
+  },
+  {
+   "t": 47.65,
+   "forca": 12.5
+  }
+ ],
+ "ambientes": [
+  {
+   "t": 0.0,
+   "musica": 0.16,
+   "descricao": [
+    [
+     "tom puro / bipe",
+     0.33
+    ],
+    [
+     "Singing bowl",
+     0.16
+    ]
+   ]
+  },
+  {
+   "t": 3.0,
+   "musica": 0.59,
+   "descricao": []
+  },
+  {
+   "t": 6.0,
+   "musica": 0.73,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.15
+    ],
+    [
+     "música ambiente",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 9.0,
+   "musica": 0.66,
+   "descricao": [
+    [
+     "Hammond organ",
+     0.18
+    ],
+    [
+     "Organ",
+     0.16
+    ]
+   ]
+  },
+  {
+   "t": 12.0,
+   "musica": 0.76,
+   "descricao": [
+    [
+     "música ambiente",
+     0.28
+    ],
+    [
+     "New-age music",
+     0.16
+    ],
+    [
+     "Singing bowl",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 15.0,
+   "musica": 0.74,
+   "descricao": [
+    [
+     "música ambiente",
+     0.21
+    ],
+    [
+     "Singing bowl",
+     0.1
+    ],
+    [
+     "New-age music",
+     0.1
+    ]
+   ]
+  },
+  {
+   "t": 18.0,
+   "musica": 0.67,
+   "descricao": []
+  },
+  {
+   "t": 21.0,
+   "musica": 0.55,
+   "descricao": []
+  },
+  {
+   "t": 24.0,
+   "musica": 0.7,
+   "descricao": []
+  },
+  {
+   "t": 27.0,
+   "musica": 0.73,
+   "descricao": [
+    [
+     "música ambiente",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 30.0,
+   "musica": 0.63,
+   "descricao": []
+  },
+  {
+   "t": 33.0,
+   "musica": 0.65,
+   "descricao": [
+    [
+     "música ambiente",
+     0.12
+    ]
+   ]
+  },
+  {
+   "t": 36.0,
+   "musica": 0.75,
+   "descricao": [
+    [
+     "música ambiente",
+     0.15
+    ]
+   ]
+  },
+  {
+   "t": 39.0,
+   "musica": 0.77,
+   "descricao": []
+  },
+  {
+   "t": 42.0,
+   "musica": 0.78,
+   "descricao": []
+  },
+  {
+   "t": 45.0,
+   "musica": 0.64,
+   "descricao": [
+    [
+     "Hammond organ",
+     0.18
+    ],
+    [
+     "Organ",
+     0.14
+    ]
+   ]
+  },
+  {
+   "t": 48.0,
+   "musica": 0.78,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.18
+    ],
+    [
+     "música ambiente",
+     0.13
+    ]
+   ]
+  },
+  {
+   "t": 51.0,
+   "musica": 0.65,
+   "descricao": [
+    [
+     "Organ",
+     0.1
+    ]
+   ]
+  },
+  {
+   "t": 54.0,
+   "musica": 0.76,
+   "descricao": [
+    [
+     "música ambiente",
+     0.11
+    ]
+   ]
+  },
+  {
+   "t": 57.0,
+   "musica": 0.81,
+   "descricao": [
+    [
+     "Singing bowl",
+     0.22
+    ],
+    [
+     "música ambiente",
+     0.17
+    ]
+   ]
+  }
+ ],
+ "cortes": [
+  {
+   "t": 2.12,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 3.12,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 5.17,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 5.75,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 6.79,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 8.21,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 9.79,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 11.67,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 16.54,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 17.08,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 24.08,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 26.5,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 35.62,
+   "na_batida": false,
+   "no_golpe": true,
+   "efeito": null
+  },
+  {
+   "t": 39.62,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 42.38,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 48.17,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  },
+  {
+   "t": 55.75,
+   "na_batida": false,
+   "no_golpe": false,
+   "efeito": null
+  }
+ ]
+}

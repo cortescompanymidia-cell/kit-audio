@@ -20,7 +20,7 @@ Este repositório guarda o que o Claude aprendeu e construiu com o dono da conta
 | `tratar_audio.py` | Pós-produção de voz: limpeza, equalização, compressão, ducking e loudness −14 LUFS |
 | `ferramentas-video/analisar_video.py` | Ritmo de cortes, gancho, folhas de quadros e medidas de áudio de um vídeo de referência |
 | `ferramentas-video/narrar.py` | Narração em pt-BR com voz sintética (Kokoro: pm_alex, pm_santa, pf_dora) |
-| `mapas-sonoros/` | Mapas sonoros dos 8 vídeos de referência já analisados (5 verticais, 3 showreels) |
+| `mapas-sonoros/` | Mapas sonoros dos 8 vídeos de referência (5 verticais, 3 showreels). Gerados antes da correção de nomes de efeitos e do BPM; refaça com `mapa_sonoro.py` se precisar de precisão |
 | `exemplos/editar_nutrigenomica.py` | **Modelo de reedição completa** de um vídeo vertical: zoom que esconde legenda antiga, cortes no ritmo das frases, legenda karaokê sincronizada, cartões, som tratado e 4K com IA. Use como base para os próximos |
 | `ferramentas-video/esrgan_onnx.py` | Converte o Real-ESRGAN para ONNX (aumento de resolução 4× com IA, sem PyTorch) |
 | `exemplos/` (outros) | O primeiro vídeo feito (animação de texto com PIL + ffmpeg) e a narração dele |
@@ -51,7 +51,7 @@ Lições sobre o ambiente na nuvem:
 
 - Vídeo de eleição 2026 (teste de animação e narração).
 - Manuais de edição vertical e de showreel, a partir de 8 vídeos de referência.
-- Reedição do vídeo de nutrigenômica de uma amiga do usuário: prévia 1080p aprovada para revisão; o 4K foi interrompido e não terminou.
+- Reedição do vídeo de nutrigenômica de uma amiga do usuário: prévia em 1080p entregue ao usuário; o 4K foi interrompido e não terminou.
 
 ## Próximos passos combinados
 

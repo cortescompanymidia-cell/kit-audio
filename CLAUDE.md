@@ -22,6 +22,7 @@ Este repositório guarda o que o Claude aprendeu e construiu com o dono da conta
 | `ferramentas-video/narrar.py` | Narração em pt-BR com voz sintética (Kokoro: pm_alex, pm_santa, pf_dora) |
 | `mapas-sonoros/` | Mapas sonoros dos 8 vídeos de referência (5 verticais, 3 showreels). Gerados antes da correção de nomes de efeitos e do BPM; refaça com `mapa_sonoro.py` se precisar de precisão |
 | `exemplos/editar_nutrigenomica.py` | **Modelo de reedição completa** de um vídeo vertical: zoom que esconde legenda antiga, cortes no ritmo das frases, legenda karaokê sincronizada, cartões, som tratado e 4K com IA. Use como base para os próximos |
+| `exemplos/corte_podcast.py` | **Modelo de corte de podcast** horizontal → vertical: tira pausas, recorta no rosto com punch-in, alterna com quadro inteiro sobre fundo desfocado, legenda amarela palavra a palavra, gancho, crédito e pedido final |
 | `ferramentas-video/esrgan_onnx.py` | Converte o Real-ESRGAN para ONNX (aumento de resolução 4× com IA, sem PyTorch) |
 | `exemplos/` (outros) | O primeiro vídeo feito (animação de texto com PIL + ffmpeg) e a narração dele |
 
@@ -51,6 +52,7 @@ Lições sobre o ambiente na nuvem:
 
 - Vídeo de eleição 2026 (teste de animação e narração).
 - Manuais de edição vertical e de showreel, a partir de 8 vídeos de referência.
+- Corte vertical de 20 s de um trecho do Flow Podcast (exemplos/corte_podcast.py).
 - Reedição do vídeo de nutrigenômica de uma amiga do usuário: prévia em 1080p entregue ao usuário; o 4K foi interrompido e não terminou.
 
 ## Próximos passos combinados

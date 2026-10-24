@@ -209,7 +209,7 @@ def main():
 
     # ---------- relatório legível ----------
     L = [f'# Mapa sonoro · {os.path.basename(a.arquivo)}', '',
-         f'**Duração:** {mmss(dur)} · **Fala:** {dados["fala"]["percentual"]}% do tempo · **Música:** ~{bpm:.0f} BPM (batida a cada {60 / bpm:.2f} s)', '',
+         f'**Duração:** {mmss(dur)} · **Fala:** {dados["fala"]["percentual"]}% do tempo · ' + (f'**Música:** ~{bpm:.0f} BPM (batida a cada {60 / bpm:.2f} s)' if bpm else '**Música:** sem batida definida'), '',
          '## Medidas técnicas', '',
          f'| Loudness | Pico real | Piso de ruído | Sinal/ruído | Chiado (5–9 kHz) | Zumbido | Voz acima do fundo | Ducking |',
          '|---|---|---|---|---|---|---|---|',

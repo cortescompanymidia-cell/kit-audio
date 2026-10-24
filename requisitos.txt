@@ -7,3 +7,5 @@ pyloudnorm
 noisereduce
 pedalboard
 kokoro-onnx
+onnx
+onnxruntime

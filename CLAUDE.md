@@ -21,7 +21,9 @@ Este repositório guarda o que o Claude aprendeu e construiu com o dono da conta
 | `ferramentas-video/analisar_video.py` | Ritmo de cortes, gancho, folhas de quadros e medidas de áudio de um vídeo de referência |
 | `ferramentas-video/narrar.py` | Narração em pt-BR com voz sintética (Kokoro: pm_alex, pm_santa, pf_dora) |
 | `mapas-sonoros/` | Mapas sonoros dos 8 vídeos de referência já analisados (5 verticais, 3 showreels) |
-| `exemplos/` | O primeiro vídeo feito (animação de texto e gráfico com PIL + ffmpeg) e a narração dele |
+| `exemplos/editar_nutrigenomica.py` | **Modelo de reedição completa** de um vídeo vertical: zoom que esconde legenda antiga, cortes no ritmo das frases, legenda karaokê sincronizada, cartões, som tratado e 4K com IA. Use como base para os próximos |
+| `ferramentas-video/esrgan_onnx.py` | Converte o Real-ESRGAN para ONNX (aumento de resolução 4× com IA, sem PyTorch) |
+| `exemplos/` (outros) | O primeiro vídeo feito (animação de texto com PIL + ffmpeg) e a narração dele |
 
 ## Preparar o ambiente
 
@@ -34,6 +36,9 @@ Lições sobre o ambiente na nuvem:
 - Por isso todos os modelos vêm de releases do GitHub: `k2-fsa/sherpa-onnx` (Whisper, Spleeter, CED, GTCRN, Silero VAD) e `thewh1teagle/kokoro-onnx` (voz).
 - Vídeos do YouTube não abrem: peça ao usuário o arquivo mp4.
 - Não há `apt-get`. ffmpeg já vem instalado.
+- PyTorch não instala (o servidor dele é bloqueado): por isso o Real-ESRGAN roda em ONNX.
+- Arquivos soltos do GitHub (raw) são bloqueados; fontes vêm do npm (`@fontsource/montserrat`, `@fontsource/dm-serif-display`).
+- 4K com IA leva ~4 s por quadro (cerca de 2 h para 1 minuto a 30 qps). Faça antes uma prévia em 1080p (~1,5 min) e só depois o 4K. Se a sessão ficar inativa, a renderização para.
 
 ## Limites (seja honesto com o usuário sobre eles)
 
@@ -41,6 +46,12 @@ Lições sobre o ambiente na nuvem:
 - O classificador de sons nomeia mal efeitos sintéticos ("sonar" costuma ser ping eletrônico; "heart murmur" costuma ser sub grave). Num corte, "veículo" costuma ser whoosh.
 - O BPM não é confiável quando a música está muito baixa sob a fala (o detector tende a dar 120).
 - Não gera imagens realistas nem vídeo com pessoas. O forte é texto, gráfico, animação e montagem de material enviado.
+
+## Trabalhos feitos
+
+- Vídeo de eleição 2026 (teste de animação e narração).
+- Manuais de edição vertical e de showreel, a partir de 8 vídeos de referência.
+- Reedição do vídeo de nutrigenômica de uma amiga do usuário: prévia 1080p aprovada para revisão; o 4K foi interrompido e não terminou.
 
 ## Próximos passos combinados
 

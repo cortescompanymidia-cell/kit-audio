@@ -16,6 +16,9 @@ mkdir -p modelos/kokoro
 K=https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0
 [ -e modelos/kokoro/kokoro-v1.0.onnx ] || curl -fsSL -o modelos/kokoro/kokoro-v1.0.onnx $K/kokoro-v1.0.onnx &
 [ -e modelos/kokoro/voices-v1.0.bin ] || curl -fsSL -o modelos/kokoro/voices-v1.0.bin $K/voices-v1.0.bin &
+mkdir -p modelos/upscale modelos/fontes
+[ -e modelos/upscale/realesr-general-x4v3.onnx ] || { curl -fsSL -o modelos/upscale/realesr-general-x4v3.pth https://github.com/xinntao/Real-ESRGAN/releases/download/v0.2.5.0/realesr-general-x4v3.pth && python3 ferramentas-video/esrgan_onnx.py modelos/upscale/realesr-general-x4v3.pth modelos/upscale/realesr-general-x4v3.onnx; } &
+if [ ! -d modelos/fontes/package ]; then (cd modelos/fontes && for p in montserrat dm-serif-display; do t=$(curl -fsSL https://registry.npmjs.org/@fontsource/$p/latest | python3 -c "import sys,json;print(json.load(sys.stdin)['dist']['tarball'])"); curl -fsSL "$t" | tar xz --wildcards "package/files/*latin-[0-9]*-normal.woff"; done) & fi
 wait
 command -v ffmpeg >/dev/null || echo "ATENÇÃO: instale o ffmpeg (apt install ffmpeg / brew install ffmpeg)"
 echo "Kit pronto."
